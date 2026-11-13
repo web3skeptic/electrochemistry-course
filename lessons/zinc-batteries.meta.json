@@ -1,0 +1,45 @@
+{
+  "id": "zinc-batteries",
+  "title": "Zinc: from Volta's pile to the alkaline cell",
+  "steps": 10,
+  "concepts": [
+    { "key": "pile", "label": "voltaic pile", "definition": "Volta's battery of 1800: a stack of zinc | wet cardboard | copper cells in which zinc gives electrons, H⁺ takes them on the copper surface (0.76 V per pair in acid) and the pairs' voltages add." },
+    { "key": "polar", "label": "polarisation", "definition": "The sag in a cell's voltage while it delivers current, caused by products building up (or reactants running short) at an electrode surface, e.g. the film of hydrogen bubbles on the copper of a Volta cell; it eases when the cell rests." },
+    { "key": "depol", "label": "depolariser (MnO₂)", "definition": "A solid oxidising agent packed around the positive electrode that takes the electrons instead of H⁺ so that no hydrogen film forms; manganese dioxide (Mn +4 → +3) is the classic one and is simply the cathode reactant in modern terms." },
+    { "key": "zncarbon", "label": "zinc–carbon (Leclanché) cell", "definition": "Primary cell with a zinc can as anode (−) and container, an MnO₂ + carbon powder mix around an inert carbon rod as cathode (+), and an NH₄Cl/ZnCl₂ paste as electrolyte: Zn + 2MnO₂ + 2NH₄⁺ → Zn²⁺ + Mn₂O₃ + 2NH₃ + H₂O, about 1.5 V; the electrolyte is consumed." },
+    { "key": "dry", "label": "dry cell", "definition": "A cell whose electrolyte is immobilised as a moist paste or gel so that nothing can spill and it works in any position (Gassner, 1886)." },
+    { "key": "primary", "label": "primary vs secondary cell", "definition": "A primary cell is used once and discarded because its reaction cannot practically be reversed; a secondary cell can be recharged by driving current through it backwards." },
+    { "key": "alkaline", "label": "alkaline Zn–MnO₂ cell", "definition": "Primary cell with zinc powder in KOH gel as anode (−, centre, brass pin) and an MnO₂ + graphite ring against an inert steel can as cathode (+): Zn + 2MnO₂ → ZnO + Mn₂O₃, E° ≈ 1.41 V (about 1.5 V on the label); OH⁻ is passed along, not consumed." },
+    { "key": "znair", "label": "zinc–air cell", "definition": "Primary cell that stores only the zinc anode and takes its oxidising agent, O₂, from the air through a thin porous carbon cathode: 2Zn + O₂ → 2ZnO, E° = 1.66 V, about 1.4 V in use; used in hearing aids." },
+    { "key": "agox", "label": "silver oxide cell", "definition": "Button cell with a zinc anode and an Ag₂O cathode in KOH: Zn + Ag₂O → ZnO + 2Ag, 1.55 V, with a flat discharge voltage because all reactants and products are separate pure solids." }
+  ],
+  "namedOnly": [
+    "ammonium ion NH₄⁺ (introduced in one sentence as NH₃ carrying an extra H⁺)",
+    "ammonia NH₃ (only as a product in the zinc–carbon equation)",
+    "inert electrode / current collector (carbon rod, steel can, brass pin: described by function)",
+    "stacking cells so voltages add ('cells in series' is taught in Lead)",
+    "internal resistance and overpotential (the load-dependent losses are all called polarisation here; pointer to Real batteries)",
+    "catalyst and slow oxygen reduction (pointer to Hydrogen and fuel cells)",
+    "flat vs sloping discharge curve (used descriptively; 'flat discharge curve' is a concept of Nickel)",
+    "limiting reactant (shown as 'the side that runs out first', not named)",
+    "zinc chloride 'heavy duty' cells, electrolytic MnO₂ (mentioned in passing or in sources only)"
+  ],
+  "summary": "Running example: one zinc anode followed through five cathodes, from Volta's zinc–copper cell in dilute acid (0.76 V, H₂ bubbles polarise the copper) via Leclanché's MnO₂ depolariser and the zinc–carbon dry cell to the alkaline AA (about 3.5 g of zinc powder, Zn + 2MnO₂ → ZnO + Mn₂O₃, E° ≈ 1.41 V), zinc–air (1.66 V, gains mass from O₂) and silver oxide (1.55 V, flat because Q cannot change). Capacity bookkeeping reuses 820 mAh/g for zinc from the 6.54 g strip and adds 308 mAh/g for MnO₂ (2.66 g MnO₂ per g Zn). Capstone: a cutaway AA discharge bench comparing zinc–carbon and alkaline cells on four devices (25 mA to 1 A) with a movable device cut-off, where a cell 'dead' in a camera still runs a remote control. Hooks for later lessons: 'polarisation' as the umbrella word for load-dependent voltage loss (Real batteries splits it into internal resistance and overpotential), primary vs secondary (Lead), electrolyte consumed vs merely passed along (lead–acid consumes its acid, nickel cells do not), a device's cut-off voltage stranding charge on a sloping curve (flat curves in Nickel), and oxygen from the air as a cathode (fuel cells, corrosion).",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, 17.5 Batteries and Fuel Cells", "url": "https://openstax.org/books/chemistry-2e/pages/17-5-batteries-and-fuel-cells" },
+    { "title": "Wikipedia: Voltaic pile", "url": "https://en.wikipedia.org/wiki/Voltaic_pile" },
+    { "title": "Wikipedia: Leclanché cell", "url": "https://en.wikipedia.org/wiki/Leclanch%C3%A9_cell" },
+    { "title": "Wikipedia: Zinc–carbon battery", "url": "https://en.wikipedia.org/wiki/Zinc%E2%80%93carbon_battery" },
+    { "title": "Wikipedia: Alkaline battery", "url": "https://en.wikipedia.org/wiki/Alkaline_battery" },
+    { "title": "Wikipedia: AA battery", "url": "https://en.wikipedia.org/wiki/AA_battery" },
+    { "title": "Energizer E91 (alkaline AA) product data sheet", "url": "https://data.energizer.com/pdfs/e91.pdf" },
+    { "title": "Wikipedia: Zinc–air battery", "url": "https://en.wikipedia.org/wiki/Zinc%E2%80%93air_battery" },
+    { "title": "Wikipedia: Silver oxide battery", "url": "https://en.wikipedia.org/wiki/Silver_oxide_battery" }
+  ],
+  "engineWishes": [
+    "A shared Chem cutaway/cell drawing kit (jar with two electrodes, wire with travelling electrons, bubbles; a cylindrical-cell cutaway with labelled layers): this lesson hand-rolls voltaCell() and aaCell(), and lead-acid / nickel / lithium lessons will each need a similar cutaway.",
+    "Chem.E0 could carry the alkaline MnO₂ couple (2MnO₂ + H₂O + 2e⁻ → Mn₂O₃ + 2OH⁻, +0.15 V) and Ag₂O + H₂O + 2e⁻ → 2Ag + 2OH⁻ (+0.34 V); this lesson defines both locally.",
+    "A shared 'scrolling trace' helper for plot() (push a sample, keep the last N) would simplify live voltage-vs-time widgets.",
+    "stat().set() uses textContent in a monospace font, so formulas with superscripts cannot go into readout tiles."
+  ]
+}

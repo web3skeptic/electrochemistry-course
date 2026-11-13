@@ -1,0 +1,31 @@
+{
+  "id": "nernst",
+  "title": "Concentration and the Nernst equation",
+  "steps": 9,
+  "concepts": [
+    { "key": "nonstd", "label": "non-standard conditions", "definition": "Any state of a cell in which the ion concentrations are not all 1 mol/L (or the temperature is not 25 °C), so the voltage differs from E°cell." },
+    { "key": "push", "label": "more reactant ion → more push", "definition": "Le Chatelier intuition for a cell: raising the concentration of an ion the reaction consumes raises the voltage, and piling up an ion it produces lowers it." },
+    { "key": "Q", "label": "reaction quotient Q", "definition": "Product ion concentrations divided by reactant ion concentrations, each raised to its coefficient, with pure solids left out; Q = 1 at standard conditions and it grows as a cell discharges (Daniell cell: Q = [Zn²⁺]/[Cu²⁺])." },
+    { "key": "decade", "label": "59 mV per decade", "definition": "At 25 °C every tenfold increase in Q lowers the cell voltage by 59.2 mV divided by n, the number of electrons transferred (29.6 mV for the Daniell cell)." },
+    { "key": "nernst", "label": "Nernst equation", "definition": "E = E° − (RT/nF) ln Q, which at 25 °C is E° − (0.0592 V/n) log₁₀ Q; it gives the voltage of a cell or the potential of a single electrode at any concentrations." },
+    { "key": "conccell", "label": "concentration cell", "definition": "A cell with the same metal and ion in both half-cells but different concentrations: E° = 0, the voltage is (59.2 mV/n) per tenfold concentration difference, and it runs until the concentrations are equal." },
+    { "key": "dead", "label": "dead cell = equilibrium", "definition": "A cell reads 0 V when forward and reverse reactions happen equally often so nothing changes any more (equilibrium); this is where the Q term of the Nernst equation exactly cancels E°, and ΔG = 0." },
+    { "key": "K", "label": "equilibrium constant K from E°", "definition": "K is the value of Q at equilibrium; setting E = 0 in the Nernst equation gives log₁₀ K = nE°/0.0592 V at 25 °C (Daniell cell: K ≈ 10³⁷)." }
+  ],
+  "namedOnly": ["Le Chatelier's principle (named as the pattern behind 'more reactant → more push')", "activity (effective concentration; the course uses plain mol/L)", "gas constant R and thermal voltage RT/F ≈ 25.7 mV (explained in one paragraph, not a tracked concept)", "pH / pH electrode (one-line application: about 59 mV per tenfold change in [H⁺])", "decade (a factor of ten)", "discharge curve shape (plateau then cliff; internal-resistance losses deferred to Real batteries)"],
+  "summary": "Running example: the Daniell cell (Zn | Zn²⁺ || Cu²⁺ | Cu, E° = 1.10 V, n = 2) at changing ion concentrations, with Q = [Zn²⁺]/[Cu²⁺]; side examples are a Zn–Ag cell (squared term in Q), a Cu/Cu²⁺ concentration cell and a Sn/Pb²⁺ pair with K ≈ 2. The capstone is a Daniell discharge simulator: constant current converts Cu²⁺ to Zn²⁺ via Faraday's constant, voltage follows Nernst, and the cell dies at Q = K ≈ 10³⁷ (revivable by adding CuSO₄). Hooks for later lessons: 'voltage = E° minus 59.2 mV/n per decade of Q', 'plateau then cliff' discharge shape, 'voltage is a poor fuel gauge', 'dead = equilibrium (ΔG = 0)', the half-cell form of Nernst (electrode levels slide on the potential ladder), and the explicit note that current-dependent losses are not modelled here.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §17.4 Potential, Free Energy, and Equilibrium", "url": "https://openstax.org/books/chemistry-2e/pages/17-4-potential-free-energy-and-equilibrium" },
+    { "title": "LibreTexts Chemistry: Nernst Equation", "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Electrochemistry/Nernst_Equation" },
+    { "title": "Wikipedia: Nernst equation", "url": "https://en.wikipedia.org/wiki/Nernst_equation" },
+    { "title": "Wikipedia: Reaction quotient", "url": "https://en.wikipedia.org/wiki/Reaction_quotient" },
+    { "title": "Wikipedia: Concentration cell", "url": "https://en.wikipedia.org/wiki/Concentration_cell" },
+    { "title": "Wikipedia: Glass electrode", "url": "https://en.wikipedia.org/wiki/Glass_electrode" },
+    { "title": "Wikipedia: Daniell cell", "url": "https://en.wikipedia.org/wiki/Daniell_cell" }
+  ],
+  "engineWishes": [
+    "A shared two-beaker galvanic-cell drawing in chem.js (electrodes, salt bridge, jiggling ions, electrons moving on the wire, voltmeter): this lesson builds its own cellView(), and galvanic-cell / electrolysis / corrosion likely each build another.",
+    "A shared scientific-notation formatter (e.g. fmt.sci10(1.5e37) → 1.5×10³⁷): fmt.sci prints 1.50e+37 and fmt.pow10 only handles exact powers of ten.",
+    "smoke.mjs takes mobile screenshots of steps 1–2 only; a flag for all steps would help."
+  ]
+}

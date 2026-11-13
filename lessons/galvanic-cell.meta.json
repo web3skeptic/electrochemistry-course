@@ -1,0 +1,38 @@
+{
+  "id": "galvanic-cell",
+  "title": "The galvanic cell: making electrons take the wire",
+  "steps": 9,
+  "concepts": [
+    { "key": "halfcell", "label": "half-cell", "definition": "One half-reaction in its own container: a metal electrode in contact with a solution of its own ions." },
+    { "key": "electrode", "label": "electrode", "definition": "The solid conductor (here a metal strip) of a half-cell, where electrons enter or leave the solid." },
+    { "key": "anode", "label": "anode (oxidation)", "definition": "The electrode where oxidation happens; electrons leave the cell from it; the negative (−) terminal of a galvanic cell." },
+    { "key": "cathode", "label": "cathode (reduction)", "definition": "The electrode where reduction happens; electrons arrive at it; the positive (+) terminal of a galvanic cell." },
+    { "key": "bridge", "label": "salt bridge / separator", "definition": "An ion path between the two half-cells (a tube of inert salt solution such as KNO3, or a porous wall) that keeps both solutions neutral without letting them mix; without it charge builds up and the current stops." },
+    { "key": "galvanic", "label": "galvanic (voltaic) cell", "definition": "A device that turns a spontaneous redox reaction into electric current by separating the half-reactions so that electrons must travel through an external wire while ions close the loop inside." },
+    { "key": "daniell", "label": "Daniell cell", "definition": "The galvanic cell Zn | Zn2+ || Cu2+ | Cu (zinc in zinc sulfate, copper in copper sulfate; Daniell, 1836), about 1.10 V with 1 mol/L solutions." },
+    { "key": "voltage", "label": "voltage (push)", "definition": "Qualitative: how hard a cell pushes each electron from anode to cathode, in volts; set by the pair of half-cells (bigger the further apart the metals are in the activity series)." },
+    { "key": "current", "label": "current (flow)", "definition": "Qualitative: how many electrons pass through the wire per second; depends on the voltage and on how easy the external path is." },
+    { "key": "notation", "label": "cell notation", "definition": "One-line description of a cell, anode on the left: anode | anode solution || cathode solution | cathode, with | a phase boundary and || the salt bridge." }
+  ],
+  "namedOnly": [
+    "volt (unit used, defined in Charge, energy and capacity)",
+    "voltmeter (instrument that reads the push while passing almost no current)",
+    "short circuit (a thick wire as the external path)",
+    "Nernst equation / voltage sag as ions run out (pointer only)",
+    "state symbols (s), (aq) in the fuller cell notation",
+    "voltages add along the series (Zn–Fe + Fe–Cu = Zn–Cu), as a teaser for electrode potentials"
+  ],
+  "summary": "Running example: the zinc strip in copper sulfate from the redox lesson, pulled apart into the Daniell cell Zn | Zn2+ || Cu2+ | Cu; drawn with one dot = 0.025 mol of ions, 150 mL of 1 mol/L per half-cell, a KNO3 salt bridge, and measured voltages for Zn–Cu 1.10 V, Fe–Cu 0.78 V, Zn–Fe 0.32 V, Cu–Ag 0.46 V, Zn–Ag 1.56 V (from Chem.E0). Capstone: an animated cell whose metals (Zn, Fe, Cu, Ag), wire (open / bulb / short circuit) and salt bridge can be changed while electrode masses, electrons transferred and ion counts update. Later lessons can reuse: anode = oxidation = (−) in a galvanic cell, electrons anode → cathode in the wire, anions drift to the anode side and cations to the cathode side, charge build-up without an ion path, 'voltage = push, current = flow', and the fact that gaps along the series add.",
+  "sources": [
+    { "title": "OpenStax, Chemistry 2e, §17.2 Galvanic Cells", "url": "https://openstax.org/books/chemistry-2e/pages/17-2-galvanic-cells" },
+    { "title": "OpenStax, Chemistry 2e, Appendix L: Standard Electrode (Half-Cell) Potentials", "url": "https://openstax.org/books/chemistry-2e/pages/l-standard-electrode-half-cell-potentials" },
+    { "title": "OpenStax, Chemistry 2e, Appendix G: Standard Thermodynamic Properties", "url": "https://openstax.org/books/chemistry-2e/pages/g-standard-thermodynamic-properties-for-selected-substances" },
+    { "title": "Wikipedia: Daniell cell", "url": "https://en.wikipedia.org/wiki/Daniell_cell" },
+    { "title": "Wikipedia: Galvanic cell", "url": "https://en.wikipedia.org/wiki/Galvanic_cell" },
+    { "title": "Wikipedia: Salt bridge", "url": "https://en.wikipedia.org/wiki/Salt_bridge" }
+  ],
+  "engineWishes": [
+    "A shared Chem drawing kit (beaker, electrode, drifting labelled ions, electrons travelling along a wire path, salt bridge) would save every cell/battery lesson from re-implementing it; this lesson's makeCell() could be lifted into assets.",
+    "smoke.mjs takes mobile screenshots only for steps 1–2 and only of the first viewport; full-page mobile shots of every step would make phone layout checks possible."
+  ]
+}

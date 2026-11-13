@@ -1,0 +1,12 @@
+{
+  "name": "chem-course",
+  "private": true,
+  "description": "Interactive, step-by-step course on inorganic electrochemistry: how elements produce electricity",
+  "scripts": {
+    "serve": "python3 -m http.server 5213",
+    "test": "node tests/smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.50.0"
+  }
+}

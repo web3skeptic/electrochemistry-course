@@ -1,0 +1,37 @@
+{
+  "id": "electrode-potentials",
+  "title": "Electrode potentials: predicting the voltage",
+  "steps": 9,
+  "concepts": [
+    { "key": "adds", "label": "cell voltages add up", "definition": "A voltage (in volts, read by a voltmeter) belongs to a pair of half-cells, and the voltages of pairs chain like height differences: Zn–Cu 1.10 V + Cu–Ag 0.46 V = Zn–Ag 1.56 V." },
+    { "key": "potential", "label": "electrode potential", "definition": "One number per half-cell such that a cell's voltage is the difference of two of them; only differences are measurable, so the zero is a convention." },
+    { "key": "she", "label": "standard hydrogen electrode (SHE)", "definition": "The agreed zero of the potential scale: platinum in 1 mol/L H⁺ with H₂ gas at 1 bar, 2H⁺ + 2e⁻ ⇌ H₂, defined as exactly 0 V." },
+    { "key": "stdcond", "label": "standard conditions", "definition": "Every dissolved species at 1 mol/L, every gas at 1 bar, pure solids and liquids, tables quoted at 25 °C; marked by the ° sign." },
+    { "key": "e0", "label": "standard reduction potential E°", "definition": "The potential of a half-cell against the SHE under standard conditions, with the half-reaction written as a reduction (ox + n e⁻ → red); more positive means the oxidised form pulls electrons harder." },
+    { "key": "series", "label": "electrochemical series (potential ladder)", "definition": "The table of half-reactions sorted by E°, drawn as a ladder with the most negative E° (strongest electron-givers) at the top so that electrons fall downwards; it is the activity series with numbers." },
+    { "key": "ecell", "label": "E°cell = E°cathode − E°anode", "definition": "The standard voltage of a cell is the reduction potential of the cathode half-cell minus that of the anode half-cell, both taken unchanged from the table." },
+    { "key": "sign", "label": "positive E°cell = spontaneous", "definition": "If E°cell is positive the reaction runs by itself in the direction written (galvanic cell); if negative, the reverse reaction is the spontaneous one." },
+    { "key": "perelectron", "label": "E° is per electron (never multiplied)", "definition": "A potential is a push per electron (a height, not an amount), so multiplying a half-reaction to balance electrons leaves its E° unchanged." },
+    { "key": "ends", "label": "strongest oxidising / reducing agents", "definition": "Reduced forms at the negative end of the ladder are the strongest reducing agents (Li, −3.04 V) and oxidised forms at the positive end the strongest oxidising agents (F₂, +2.87 V); a reducing agent reacts spontaneously with any oxidising agent on a lower rung." }
+  ],
+  "namedOnly": [
+    "Nernst equation (concentration dependence shown qualitatively, pointer to 'Concentration and the Nernst equation')",
+    "reference electrodes other than the SHE (mentioned in one sentence, not named)",
+    "energy = electrons × volts (pointer to 'Charge, energy and capacity')",
+    "water stability / reaction of extreme couples with water (pointer to the lithium lesson)",
+    "inert (platinum) electrode for couples without a solid metal"
+  ],
+  "summary": "Running example: the Daniell cell (1.10 V) with iron and silver half-cells as companions; measured pair voltages chain like heights, which leads to one potential per half-cell, the hydrogen zero, standard conditions and E°. The table (Chem.E0) is drawn throughout as a ladder with the most negative E° at the top so electrons fall downwards; E°cell = E°cathode − E°anode is the drop, positive = spontaneous, and E° is never multiplied by coefficients (Zn + 2Ag⁺, 1.56 V). Capstone: a cell builder over all Chem.E0 half-cells giving voltage, anode/cathode, electron direction and the balanced overall reaction, with presets later lessons can refer back to (H₂/O₂ 1.23 V, Pb/PbO₂ 2.05 V, Cd/NiO(OH) 1.30 V, Li/F₂ 5.91 V).",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §17.3 Electrode and Cell Potentials", "url": "https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials" },
+    { "title": "OpenStax Chemistry 2e, Appendix L: Standard Electrode (Half-Cell) Potentials", "url": "https://openstax.org/books/chemistry-2e/pages/l-standard-electrode-half-cell-potentials" },
+    { "title": "Wikipedia: Standard hydrogen electrode", "url": "https://en.wikipedia.org/wiki/Standard_hydrogen_electrode" },
+    { "title": "Wikipedia: Standard electrode potential (data page)", "url": "https://en.wikipedia.org/wiki/Standard_electrode_potential_(data_page)" },
+    { "title": "Wikipedia: Standard state", "url": "https://en.wikipedia.org/wiki/Standard_state" },
+    { "title": "LibreTexts Chemistry: Standard Potentials", "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Electrochemistry/Redox_Chemistry/Standard_Potentials" }
+  ],
+  "engineWishes": [
+    "A shared Chem drawing kit (beaker + electrodes + wire + voltmeter + salt bridge with animated electrons, and a to-scale E° ladder): this lesson hand-rolls both (cellPic, ladder) and later lessons will want the same pictures.",
+    "Chem.overall(anodeId, cathodeId): combine two Chem.E0 entries into a balanced overall reaction (written locally here as overall())."
+  ]
+}

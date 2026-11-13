@@ -1,0 +1,145 @@
+{
+  "id": "corrosion",
+  "title": "Corrosion: the battery you did not want",
+  "steps": 10,
+  "concepts": [
+    {
+      "key": "corrosion",
+      "label": "corrosion",
+      "definition": "A metal being oxidised by its surroundings (metal atoms become ions or oxide), spontaneous whenever an available electron taker sits below the metal on the potential ladder."
+    },
+    {
+      "key": "o2red",
+      "label": "oxygen reduction (O₂ + 2H₂O + 4e⁻ → 4OH⁻)",
+      "definition": "The usual cathodic half-reaction of corrosion in neutral water, E° = +0.40 V: dissolved O₂ takes four electrons and becomes hydroxide; with iron (−0.44 V) it gives E°cell = 0.84 V."
+    },
+    {
+      "key": "sites",
+      "label": "anodic / cathodic site",
+      "definition": "Spots on a single piece of metal where oxidation (metal dissolves, anodic site) and reduction (oxygen takes electrons, cathodic site) happen, set apart by small differences such as oxygen supply, scratches or impurities."
+    },
+    {
+      "key": "corrcell",
+      "label": "corrosion cell",
+      "definition": "A short-circuited galvanic cell on one piece of metal: anodic site, cathodic site, the metal itself as the electron path and the water film as the ion path; its energy is lost as heat."
+    },
+    {
+      "key": "rust",
+      "label": "rust chemistry (Fe₂O₃·xH₂O)",
+      "definition": "Fe → Fe²⁺ + 2e⁻ at the anodic site, Fe²⁺ + 2OH⁻ → Fe(OH)₂ where the ions meet, then oxygen oxidises iron to +3 giving hydrated iron(III) oxide, a porous flaking crust; overall 4Fe + 3O₂ + 2xH₂O → 2Fe₂O₃·xH₂O."
+    },
+    {
+      "key": "needs",
+      "label": "rusting needs water + oxygen",
+      "definition": "A corrosion cell runs only with metal, an electron taker (oxygen) and an electrolyte (water) together; salt adds no reaction but makes the water a better ion path and so speeds rusting."
+    },
+    {
+      "key": "barrier",
+      "label": "barrier coating (paint)",
+      "definition": "A layer such as paint, grease or enamel that keeps water and oxygen off the metal so that no corrosion cell can form; it protects only while it has no hole."
+    },
+    {
+      "key": "galvcorr",
+      "label": "galvanic corrosion",
+      "definition": "When two different metals touch in an electrolyte, the one with the more negative E° becomes the anode and corrodes faster than alone, while the other becomes the cathode and is protected."
+    },
+    {
+      "key": "area",
+      "label": "small anode, large cathode",
+      "definition": "The cathode's whole surface collects oxygen and all those electrons come from the anode, so a small anode joined to a large cathode is attacked intensely and a large anode with a small cathode hardly at all."
+    },
+    {
+      "key": "sacrificial",
+      "label": "sacrificial anode",
+      "definition": "A piece of metal above iron on the potential ladder (zinc, magnesium) connected to steel on purpose so that it supplies the electrons and dissolves in the steel's place."
+    },
+    {
+      "key": "galvanising",
+      "label": "galvanising",
+      "definition": "Coating steel with zinc (usually by dipping in molten zinc): a barrier that also acts as a sacrificial anode, so the steel stays protected even where the coat is scratched, unlike tin plate or paint."
+    },
+    {
+      "key": "cathprot",
+      "label": "cathodic protection",
+      "definition": "Preventing corrosion by feeding a metal structure electrons from elsewhere so that its whole surface is a cathode; needs an electrolyte (soil, water) connecting structure and anode."
+    },
+    {
+      "key": "impressed",
+      "label": "impressed current",
+      "definition": "Cathodic protection driven by an external DC source: negative terminal to the steel, positive terminal to an inert anode; too little leaves the iron corroding, too much makes hydrogen at the steel (2H₂O + 2e⁻ → H₂ + 2OH⁻)."
+    },
+    {
+      "key": "passivation",
+      "label": "passivation (oxide film)",
+      "definition": "Self-protection of a reactive metal (Al, Cr, Ti) by a dense, adherent, self-healing oxide film a few nanometres thick (Al₂O₃, Cr₂O₃, TiO₂) that seals the surface, in contrast to porous rust; chloride can break the film locally (pitting)."
+    },
+    {
+      "key": "stainless",
+      "label": "stainless steel",
+      "definition": "Iron alloyed with at least about 10.5% chromium, enough for a continuous passive Cr₂O₃ film over the whole surface."
+    },
+    {
+      "key": "usefulcell",
+      "label": "corrosion as a battery",
+      "definition": "A metal-anode cell (lemon battery, seawater-activated magnesium cell) uses the same half-reactions as corrosion, with the anodic and cathodic sites separated so that the electrons must pass through an external wire."
+    }
+  ],
+  "namedOnly": [
+    "Nernst correction for neutral water (pointer to Concentration and the Nernst equation)",
+    "galvanic series in seawater (engineers' measured ranking, as opposed to E°)",
+    "pitting corrosion (chloride breaking a passive film)",
+    "differential aeration (why the middle of a drop is anodic), described but not named",
+    "hydrogen embrittlement / coating disbondment from over-protection (described, not named)",
+    "electrolysis (driving a reaction with an outside source; pointer only)",
+    "inert anode materials (graphite, coated titanium)",
+    "Pilling–Bedworth ratio (used as 'oxide takes 2.14 times the volume', not named in the prose)",
+    "seawater-activated magnesium batteries with a metal-salt cathode",
+    "cells in series (used as 'voltages of cells in a chain add'; taught in Lead)",
+    "alloy (stainless steel and bronze are described as mixtures of metals, not defined)"
+  ],
+  "summary": "Running example: a 5.58 g (0.100 mol) iron nail in a glass of water. The potential ladder shows that dissolved O₂ (+0.40 V) is the electron taker for iron (−0.44 V), E°cell = 0.84 V; a water drop on iron then shows rusting as a short-circuited galvanic cell with anodic and cathodic sites, followed by the rust equations, the water/oxygen/salt test-tube experiment, galvanic corrosion with the area rule, coatings (paint, tin, zinc), cathodic protection of a buried pipe, passivation of Al/Cr/Ti and stainless steel, and lemon and seawater cells as corrosion with the wire on the outside. Capstone: a ship-hull simulator (dry dock/river/sea, steel or bronze propeller, paint state, zinc or magnesium anodes or impressed current with a dose slider) that animates which metal dissolves and plots steel loss over 20 years with a labelled toy model. Hooks for later lessons: O₂ + 2H₂O + 4e⁻ → 4OH⁻ as the air cathode (zinc–air, fuel cells), 'the anode metal is consumed' (every primary cell), passivating films (aluminium, the SEI layer), and hydrogen evolution from surplus electrons (electrolysis, overcharge).",
+  "sources": [
+    {
+      "title": "OpenStax, Chemistry 2e, section 17.6: Corrosion",
+      "url": "https://openstax.org/books/chemistry-2e/pages/17-6-corrosion"
+    },
+    {
+      "title": "LibreTexts, Chemistry: The Central Science (Brown et al.), 20.8: Corrosion",
+      "url": "https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_Central_Science_(Brown_et_al.)/20%3A_Electrochemistry/20.08%3A_Corrosion"
+    },
+    {
+      "title": "Wikipedia: Galvanic corrosion",
+      "url": "https://en.wikipedia.org/wiki/Galvanic_corrosion"
+    },
+    {
+      "title": "Wikipedia: Galvanic anode",
+      "url": "https://en.wikipedia.org/wiki/Galvanic_anode"
+    },
+    {
+      "title": "Wikipedia: Cathodic protection",
+      "url": "https://en.wikipedia.org/wiki/Cathodic_protection"
+    },
+    {
+      "title": "Wikipedia: Passivation (chemistry)",
+      "url": "https://en.wikipedia.org/wiki/Passivation_(chemistry)"
+    },
+    {
+      "title": "Wikipedia: Pilling–Bedworth ratio",
+      "url": "https://en.wikipedia.org/wiki/Pilling%E2%80%93Bedworth_ratio"
+    },
+    {
+      "title": "Wikipedia: Stainless steel",
+      "url": "https://en.wikipedia.org/wiki/Stainless_steel"
+    },
+    {
+      "title": "Wikipedia: Lemon battery",
+      "url": "https://en.wikipedia.org/wiki/Lemon_battery"
+    }
+  ],
+  "engineWishes": [
+    "A shared Chem particle stage (SVG layers + particles that travel along paths with delays, plus a 'one round of a cell' helper): this lesson carries its own makeStage()/round(), and every cell or battery lesson needs the same thing.",
+    "A shared to-scale or rung-style potential ladder drawing (also wished for by activity-series and electrode-potentials).",
+    "Chem.E0 lacks Ti²⁺/Ti (about −1.63 V); the passivation step quotes it as a textbook value outside the table.",
+    "stat() values are 22 px monospace; a text variant for worded readouts ('zinc anodes', 'protected') would save each lesson from restyling .v inline."
+  ]
+}

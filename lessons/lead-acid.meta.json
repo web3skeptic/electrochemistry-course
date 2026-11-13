@@ -1,0 +1,47 @@
+{
+  "id": "lead-acid",
+  "title": "Lead: the rechargeable car battery",
+  "steps": 10,
+  "concepts": [
+    { "key": "states", "label": "lead's three states: Pb / PbSO₄ / PbO₂", "definition": "Lead is stable at oxidation numbers 0 (grey metal Pb), +2 (white, insoluble, non-conducting lead sulfate PbSO₄) and +4 (brown, conducting lead dioxide PbO₂, a strong oxidising agent); the battery pairs the two outer states and both end in the middle one." },
+    { "key": "negplate", "label": "negative plate: Pb → PbSO₄", "definition": "On discharge spongy lead is oxidised, Pb + SO₄²⁻ → PbSO₄ + 2e⁻ (E° = −0.36 V as a reduction), and the insoluble sulfate stays stuck to the plate; this plate is the anode on discharge." },
+    { "key": "posplate", "label": "positive plate: PbO₂ → PbSO₄", "definition": "On discharge lead dioxide is reduced, PbO₂ + SO₄²⁻ + 4H⁺ + 2e⁻ → PbSO₄ + 2H₂O (E° = +1.69 V), again leaving solid lead sulfate on the plate; this plate is the cathode on discharge." },
+    { "key": "overall", "label": "overall reaction: the acid is a reactant", "definition": "Pb + PbO₂ + 2H₂SO₄ → 2PbSO₄ + 2H₂O with n = 2: every electron through the wire removes one H₂SO₄ from the electrolyte and adds one H₂O, so the acid thins as the cell discharges." },
+    { "key": "cellv", "label": "2.05 V per cell", "definition": "E°cell = 1.69 − (−0.36) = 2.05 V for one lead–acid cell (about 2.1 V rested with real battery acid), counted as a nominal 2 V." },
+    { "key": "series", "label": "cells in series", "definition": "Cells joined plus-to-minus in a chain so the same electrons pass through each in turn: voltages add (six lead–acid cells ≈ 12 V) while the ampere-hour capacity stays that of one cell." },
+    { "key": "soc", "label": "state of charge", "definition": "The fraction of a battery's charge that is still available: 100% is full, 0% is flat." },
+    { "key": "density", "label": "acid density as fuel gauge", "definition": "Because sulfuric acid is consumed on discharge, the electrolyte density falls from about 1.28 g/mL (full) to about 1.12 g/mL (flat) and can be read with a hydrometer; rested cell voltage follows roughly as density + 0.84 V." },
+    { "key": "charging", "label": "charging (electrons pushed backwards)", "definition": "An outside source with a voltage above the cell's own forces electrons into the negative plate and out of the positive plate, so both half-reactions run in reverse; anode and cathode swap, positive and negative plate do not." },
+    { "key": "reversible", "label": "reversible (rechargeable) cell reaction", "definition": "A cell reaction that can be run cleanly in both directions, here because the product PbSO₄ is a solid that stays on the plate where it formed: 2PbSO₄ + 2H₂O ⇌ Pb + PbO₂ + 2H₂SO₄." },
+    { "key": "gassing", "label": "overcharge / gassing", "definition": "Once the lead sulfate is used up (charging voltage above about 2.4 V per cell), the charging current splits water, 2H₂O → 2H₂ + O₂ (hydrogen at the negative plate, oxygen at the positive), losing about 0.34 g of water per Ah and producing an explosive gas mixture." },
+    { "key": "sulfation", "label": "sulfation", "definition": "Lead sulfate left on the plates of a discharged battery coarsens into large, insulating crystals that can no longer be converted back, permanently reducing capacity; hence lead–acid batteries should be stored fully charged." },
+    { "key": "heavy", "label": "low Wh/kg, high current", "definition": "Lead gives only 2 electrons per 207 g (259 mAh/g), so lead–acid has about 170 Wh/kg in theory and 30–40 Wh/kg in practice, yet many thin porous plates and highly conducting acid let it deliver hundreds of amperes." }
+  ],
+  "namedOnly": [
+    "hydrometer (the float used to read acid density)",
+    "bisulfate HSO₄⁻ (real battery acid; the lesson uses the simplified SO₄²⁻ + 2H⁺ picture)",
+    "electrolysis (pointer: forcing a reaction uphill with an outside voltage)",
+    "slow electrode reactions / overpotential (why water does not split at 2.1 V; pointer to Real batteries, not named as overpotential)",
+    "internal resistance and voltage sag under load (pointer to Real batteries)",
+    "self-discharge (a few percent per month; taught properly in Nickel)",
+    "smart charger holding 14.4 V and letting the current fade (constant-voltage charging, not named)",
+    "sealed / valve-regulated batteries (not covered)",
+    "molar volume of a gas, about 24.5 L/mol at room temperature (used once for the gas volume)",
+    "lithium cells as the lighter alternative (pointer)"
+  ],
+  "summary": "Running example: one cell of a 12 V, 60 Ah car battery, followed from Planté's 1859 idea (lead at 0, +2 and +4) through discharge (both plates become PbSO₄, 2.24 mol e⁻ consume 232 g Pb, 268 g PbO₂ and 220 g H₂SO₄), E° = 1.69 − (−0.36) = 2.05 V, six cells in series, acid density 1.28 → 1.12 g/mL as state-of-charge gauge (volts ≈ density + 0.84), charging as the reversed reaction, gassing (0.336 g water per Ah of overcharge, above about 2.4 V per cell), sulfation, and 'per kilogram of what?' (530 → 246 → 171 → 113 → about 35 Wh/kg). The capstone is a use-and-abuse simulator of that cell: headlights, smart or dumb charger, parking for months and topping up water, with animated electrons and ions, plate composition, acid density, hard sulfate and a battery-voltage trace. Hooks for later lessons: positive/negative plate vs anode/cathode swapping on charge, an electrolyte that is consumed (contrast with KOH in NiCd/NiMH), charging voltage must exceed cell voltage, water splitting as the side reaction that limits aqueous cells, self-discharge and capacity fade as ideas, and 30–40 Wh/kg as the baseline other chemistries are compared with.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §17.5 Batteries and Fuel Cells", "url": "https://openstax.org/books/chemistry-2e/pages/17-5-batteries-and-fuel-cells" },
+    { "title": "Wikipedia: Lead–acid battery", "url": "https://en.wikipedia.org/wiki/Lead%E2%80%93acid_battery" },
+    { "title": "Wikipedia: Gaston Planté", "url": "https://en.wikipedia.org/wiki/Gaston_Plant%C3%A9" },
+    { "title": "Battery University BU-201: How does the Lead Acid Battery Work?", "url": "https://batteryuniversity.com/article/bu-201-how-does-the-lead-acid-battery-work" },
+    { "title": "Battery University BU-804b: Sulfation and How to Prevent it", "url": "https://batteryuniversity.com/article/bu-804b-sulfation-and-how-to-prevent-it" },
+    { "title": "Battery University BU-903: How to Measure State-of-charge", "url": "https://batteryuniversity.com/article/bu-903-how-to-measure-state-of-charge" },
+    { "title": "CRC Handbook of Chemistry and Physics: Electrochemical Series", "url": "https://hbcp.chemnetbase.com/" }
+  ],
+  "engineWishes": [
+    "A shared Chem cell-drawing kit (plates in a pot, wire with lamp/charger, electrons travelling along the wire, ions drifting to a plate, gas bubbles): this lesson carries its own ~200-line leadCell(), and the nickel and lithium lessons will need nearly the same picture.",
+    "Chem.molarMass(formula): this lesson sums Chem.elements masses by hand for PbO2, PbSO4, H2SO4 and H2O.",
+    "stat() values are set with textContent in a monospace font, so formulas with sub/superscripts cannot go in a readout tile; an html option (or a sans variant) would help."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "ions-salts",
+  "title": "Ions, salts and electrolytes",
+  "steps": 9,
+  "concepts": [
+    { "key": "ionicbond", "label": "ionic bond", "definition": "The electric (Coulomb) attraction between a cation and an anion; it grows with the charges and falls with the square of the distance." },
+    { "key": "lattice", "label": "crystal lattice (salt)", "definition": "The regular repeating arrangement in which every ion is surrounded by ions of opposite sign (6 neighbours in NaCl); a substance built this way is a salt, and it has no separate cation–anion pairs." },
+    { "key": "formula", "label": "ionic formula (charge balance)", "definition": "The smallest whole-number ratio of cations to anions whose charges sum to zero, written cation first with counts as subscripts: NaCl, MgCl2, Al2O3." },
+    { "key": "polyatomic", "label": "polyatomic ion", "definition": "A tightly bound group of atoms that carries a net charge and behaves as one ion: sulfate SO4 2−, hydroxide OH−, nitrate NO3−; brackets mark more than one in a formula, e.g. Ca(OH)2." },
+    { "key": "mole", "label": "mole", "definition": "A counting unit of 6.022 × 10^23 particles (atoms, ions or formula units), chosen so that a mole of an element weighs its periodic-table mass in grams." },
+    { "key": "molarmass", "label": "molar mass", "definition": "The mass of one mole of a substance in g/mol, the sum of the atomic masses in its formula (NaCl: 58.44 g/mol); moles = grams / molar mass." },
+    { "key": "water", "label": "polar water molecule", "definition": "H2O is a neutral molecule (a bound group of atoms) whose oxygen end is slightly negative and hydrogen ends slightly positive, so it is attracted to ions of either sign." },
+    { "key": "dissociation", "label": "dissociation", "definition": "A salt's lattice coming apart in water into separate, freely moving, water-wrapped cations and anions in the ratio of its formula, e.g. MgCl2(s) → Mg2+(aq) + 2Cl−(aq)." },
+    { "key": "conc", "label": "concentration (mol/L)", "definition": "Moles of dissolved substance per litre of solution; written with square brackets for a single ion, e.g. [Cl−] = 0.2 mol/L." },
+    { "key": "conduction", "label": "ionic vs electronic conduction", "definition": "In metals current is carried by moving electrons while the atoms stay put; in liquids containing ions it is carried by the ions themselves, cations toward the negative plate and anions toward the positive plate." },
+    { "key": "electrolyte", "label": "electrolyte", "definition": "A substance that conducts electricity because it contains mobile ions, such as a salt solution or a molten salt (a dry salt crystal is not one: its ions cannot move)." }
+  ],
+  "namedOnly": [
+    "Coulomb's law (stated as force ∝ charge × charge / distance², not used quantitatively afterwards)",
+    "covalent / shared-electron bonding inside polyatomic ions and water (pointer to Silicon and light)",
+    "solution, saturated solution, (s) and (aq) state symbols (used as plain vocabulary)",
+    "conductivity in S/m and the 100 Ω bulb model in the capstone (resistance is taught in Real batteries)",
+    "what happens at the plate surface (pointer to Oxidation and reduction and Electrolysis)",
+    "1 mol/L as the standard reference concentration (pointer forward)",
+    "Cu2+ and Zn2+ as the common ions of copper and zinc (taken as given)"
+  ],
+  "summary": "Running example: the Na+ and Cl− made in the first two lessons, followed from a single attracting pair to the NaCl lattice, its formula, a weighed-out mole, a dissolved 0.5 mol/L solution and finally a current-carrying electrolyte; MgCl2, Al2O3, CuSO4 and Ca(OH)2 extend each idea. The capstone is a conductivity tester (battery, bulb, two plates) where the learner picks dry salt, water, NaCl/KNO3/MgCl2/NaOH solutions at 0.0001–1 mol/L, molten NaCl or a copper bar and watches electrons move in the wire and ions between the plates. Later lessons can reuse: CuSO4 and ZnSO4 as dissociated salts, [ion] notation and mol/L, moles = grams / molar mass, and the picture 'electrons in the metal, ions in the electrolyte' with cations drifting to the negative plate.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, 7.1 Ionic Bonding", "url": "https://openstax.org/books/chemistry-2e/pages/7-1-ionic-bonding" },
+    { "title": "OpenStax Chemistry 2e, 2.6 Ionic and Molecular Compounds", "url": "https://openstax.org/books/chemistry-2e/pages/2-6-ionic-and-molecular-compounds" },
+    { "title": "OpenStax Chemistry 2e, 3.1 Formula Mass and the Mole Concept", "url": "https://openstax.org/books/chemistry-2e/pages/3-1-formula-mass-and-the-mole-concept" },
+    { "title": "OpenStax Chemistry 2e, 3.3 Molarity", "url": "https://openstax.org/books/chemistry-2e/pages/3-3-molarity" },
+    { "title": "OpenStax Chemistry 2e, 11.2 Electrolytes", "url": "https://openstax.org/books/chemistry-2e/pages/11-2-electrolytes" },
+    { "title": "Wikipedia: Ionic radius", "url": "https://en.wikipedia.org/wiki/Ionic_radius" },
+    { "title": "Wikipedia: Sodium chloride", "url": "https://en.wikipedia.org/wiki/Sodium_chloride" },
+    { "title": "Wikipedia: Molar conductivity", "url": "https://en.wikipedia.org/wiki/Molar_conductivity" }
+  ],
+  "engineWishes": [
+    "Chem: shared SVG primitives (ion(), beaker(), a two-plate circuit with moving electrons) so lessons draw particles identically; each lesson currently re-implements them.",
+    "Chem: a small table of common ions (symbol, charge, name, ionic radius, limiting ionic conductivity) and Chem.molarMass(formula).",
+    "Engine: 'svg text { fill: var(--muted) }' in course.css overrides the fill attribute on SVG text, so lesson SVG text must set colour via inline style; a note in AUTHORING.md would save time."
+  ]
+}

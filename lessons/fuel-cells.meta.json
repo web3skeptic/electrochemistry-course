@@ -1,0 +1,53 @@
+{
+  "id": "fuel-cells",
+  "title": "Hydrogen and fuel cells",
+  "steps": 10,
+  "concepts": [
+    { "key": "fuelcell", "label": "fuel cell", "definition": "A galvanic cell whose reactants (here hydrogen and oxygen) are fed in from outside, so its electrodes are not consumed and it runs for as long as it is supplied." },
+    { "key": "hor", "label": "hydrogen oxidation reaction", "definition": "The anode (−) half-reaction of a hydrogen fuel cell, H₂ → 2H⁺ + 2e⁻ in acid (H goes 0 → +1); in base 2H₂ + 4OH⁻ → 4H₂O + 4e⁻." },
+    { "key": "orr", "label": "oxygen reduction reaction", "definition": "The cathode (+) half-reaction, O₂ + 4H⁺ + 4e⁻ → 2H₂O in acid (O goes 0 → −2); in base O₂ + 2H₂O + 4e⁻ → 4OH⁻; four electrons per O₂ and the slow step of the cell." },
+    { "key": "ideal", "label": "ideal voltage 1.23 V", "definition": "E°cell of 2H₂ + O₂ → 2H₂O, 1.23 − 0.00 V: the most a hydrogen–oxygen cell can give at 25 °C, equal to the minimum voltage of water electrolysis, and worth 237 kJ per mole of H₂ (ΔG° = −nFE°)." },
+    { "key": "catalyst", "label": "catalyst", "definition": "A substance (here a platinum surface) that lowers the energy barrier of a reaction and so speeds it up, without being consumed and without changing the energy released or the cell voltage." },
+    { "key": "tpb", "label": "three-phase boundary", "definition": "The place where gas pore, electrolyte (ion path) and electron conductor all touch a catalyst grain; the electrode reaction can only run there." },
+    { "key": "pem", "label": "proton-exchange membrane (PEM) cell", "definition": "A fuel cell whose electrolyte is a thin solid membrane that conducts only H⁺ from anode to cathode; platinum catalyst, about 60–80 °C, water forms at the cathode." },
+    { "key": "variants", "label": "alkaline and solid-oxide fuel cells", "definition": "Fuel cells in which a negative ion crosses from cathode to anode and water forms at the anode: OH⁻ through KOH solution (alkaline, Apollo) or O²⁻ through a hot ceramic at 600–1000 °C (solid oxide, no platinum needed)." },
+    { "key": "overpotential", "label": "overpotential", "definition": "The voltage lost inside a working cell, compared with its ideal voltage, to drive slow electrode reactions, push ions through the electrolyte and overcome gas starvation; it leaves as heat." },
+    { "key": "polcurve", "label": "polarisation curve", "definition": "The plot of cell voltage against current density (A/cm²): about 1.0 V at zero current, a gently falling working region near 0.7 V, then a collapse when the gas supply cannot keep up." },
+    { "key": "efficiency", "label": "efficiency = V / 1.48 V", "definition": "The fraction of hydrogen's heat of combustion (286 kJ/mol, liquid water) delivered as electricity equals the cell voltage divided by 1.48 V: 83% for the ideal 1.23 V, about 47% at 0.70 V." },
+    { "key": "carnot", "label": "heat-engine (Carnot) limit", "definition": "The ceiling 1 − T_cold/T_hot (temperatures in kelvin) on any machine that turns heat into work; a fuel cell converts chemical energy to electricity directly, so the limit does not apply to it." },
+    { "key": "stack", "label": "fuel-cell stack", "definition": "Many cells pressed together in a row so that their voltages add while the same current, set by the plate area, flows through all of them; power = cells × volts per cell × current." },
+    { "key": "density", "label": "energy per kg vs per litre", "definition": "Hydrogen holds about 39 kWh of heat per kilogram, three times petrol, but as a gas very little per litre (about 0.08 g/L at 1 bar, 39 g/L at 700 bar, 71 g/L as a liquid at −253 °C)." },
+    { "key": "roundtrip", "label": "round-trip efficiency", "definition": "Energy returned by electrolyser + fuel cell divided by the energy put in; since the charge is the same both ways it equals fuel-cell voltage ÷ electrolyser voltage, roughly a third in practice." }
+  ],
+  "namedOnly": [
+    "current density (A/cm², introduced as the unit of the polarisation curve's x-axis)",
+    "activation, ohmic and mass-transport losses (described as 'slow reactions', 'ion traffic', 'gas starvation'; internal resistance is taught in Real batteries)",
+    "heat of combustion / enthalpy (used as 'the 286 kJ you get as heat by burning one mole of H₂')",
+    "liquid-water (higher) vs steam (lower) heating value, 1.48 V vs 1.25 V (one note)",
+    "kelvin (°C + 273)",
+    "bipolar plate (described by function, not named)",
+    "yttria-stabilised zirconia (given as ZrO₂ with some Y₂O₃)",
+    "William Grove's gas battery, 1839",
+    "hydrogen crossover (the 'trace of hydrogen leaking through the membrane' behind the 1.0 V open-circuit reading)",
+    "flooding of electrode pores by product water",
+    "CO₂ intolerance of alkaline cells",
+    "petrol and Li-ion energy densities (approximate comparison figures)",
+    "hydrogen–bromine and other H₂-anode cells (cathode toggle in step 3)"
+  ],
+  "summary": "Running example: a hydrogen–oxygen cell fed from a tank holding 0.20 g (0.100 mol) of H₂, which carries the same 5.36 Ah as the 6.54 g zinc strip of the Daniell cell; it is followed from 'fed, not used up' through its half-reactions (water electrolysis reversed), the 1.23 V rung on the potential ladder (the hydrogen anode is the SHE), catalyst and three-phase boundary, the PEM / alkaline / solid-oxide variants (which ion crosses, where water forms), the polarisation curve (0.70 V at 1 A/cm²), efficiency = V / 1.48 V, stacking, storage per kg vs per litre and the electrolyser + fuel cell round trip (V_out / V_in). Capstone: a polarisation-curve and stack simulator (catalyst, membrane, air vs oxygen, current density, number of cells, plate area) that must reach 1 kW or 100 kW and reports efficiency, hydrogen use and heat. Hooks for later lessons: 'a catalyst changes speed, not volts', the three voltage losses and the V–i curve (Real batteries), power peak vs efficiency, voltages add in a row (series), and oxygen from the air as a cathode reactant (zinc–air, corrosion).",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §17.5 Batteries and Fuel Cells", "url": "https://openstax.org/books/chemistry-2e/pages/17-5-batteries-and-fuel-cells" },
+    { "title": "Larminie & Dicks, Fuel Cell Systems Explained (2nd ed., Wiley, 2003)", "url": "https://doi.org/10.1002/9781118878330" },
+    { "title": "U.S. Department of Energy: Types of Fuel Cells", "url": "https://www.energy.gov/eere/fuelcells/types-fuel-cells" },
+    { "title": "U.S. Department of Energy: Hydrogen Storage", "url": "https://www.energy.gov/eere/fuelcells/hydrogen-storage" },
+    { "title": "NIST Chemistry WebBook: thermophysical properties of fluid systems (hydrogen)", "url": "https://webbook.nist.gov/chemistry/fluid/" },
+    { "title": "Wikipedia: Alkaline fuel cell", "url": "https://en.wikipedia.org/wiki/Alkaline_fuel_cell" },
+    { "title": "Wikipedia: Solid oxide fuel cell", "url": "https://en.wikipedia.org/wiki/Solid_oxide_fuel_cell" },
+    { "title": "Wikipedia: Toyota Mirai", "url": "https://en.wikipedia.org/wiki/Toyota_Mirai" }
+  ],
+  "engineWishes": [
+    "A shared particle-path helper (particles that walk along waypoints and call back on arrival) would save every cell-drawing lesson ~40 lines.",
+    "plot(): an option for a second y-axis (right-hand scale) would let voltage and power share one chart without sharing units.",
+    "toggle(): an optional boolean/checkbox variant for simple on/off switches."
+  ]
+}

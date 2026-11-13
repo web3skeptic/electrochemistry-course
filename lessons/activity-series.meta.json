@@ -1,0 +1,32 @@
+{
+  "id": "activity-series",
+  "title": "The activity series: which metal wins",
+  "steps": 9,
+  "concepts": [
+    { "key": "displacement", "label": "displacement reaction", "definition": "A metal dissolves as ions and forces another metal's ions out of solution as solid metal, e.g. Zn + Cu²⁺ → Zn²⁺ + Cu." },
+    { "key": "spontaneous", "label": "spontaneous reaction", "definition": "A reaction that goes by itself, downhill in energy, with no energy supplied from outside; its reverse is non-spontaneous and needs outside energy." },
+    { "key": "series", "label": "activity series", "definition": "The ranking of metals (plus hydrogen) by how readily they give electrons in water: Li, K, Ca, Na, Mg, Al, Zn, Fe, Ni, Sn, Pb, H, Cu, Ag, Au; a metal atom reacts with any ion on a lower rung." },
+    { "key": "acid", "label": "acid (H⁺ in water)", "definition": "A solution rich in H⁺ ions, e.g. hydrochloric acid = HCl dissociated into H⁺ and Cl⁻; H⁺ can take electrons: 2H⁺ + 2e⁻ → H₂." },
+    { "key": "hEvo", "label": "metals vs acid (H₂ evolution)", "definition": "Metals above hydrogen in the series dissolve in acid and release hydrogen gas (M + nH⁺ → Mⁿ⁺ + n/2 H₂); metals below hydrogen do not." },
+    { "key": "noble", "label": "noble metal", "definition": "A metal at the bottom of the series (silver, gold, platinum; copper borderline) that resists oxidation, survives ordinary acids and occurs in nature as metal." },
+    { "key": "budget", "label": "energy bill: metal → dissolved ion", "definition": "The position in the series reflects three energy terms together: leaving the solid metal (cost), ionisation (cost) and hydration of the ion (payback)." },
+    { "key": "hydration", "label": "hydration of an ion", "definition": "Water molecules cluster around a dissolved ion (oxygen ends toward a cation) and release energy, more for small, highly charged ions; this is why Li tops the series." }
+  ],
+  "namedOnly": ["electrolysis (forcing the uphill direction)", "electrode potentials / volts", "galvanic cell", "the exact energy that decides direction (Gibbs energy)", "aluminium's protective oxide skin (passivation)", "nitric acid as an oxidising acid", "ores and smelting"],
+  "summary": "Running example: the zinc strip in copper sulfate from Oxidation and reduction, extended to its reverse, then to Zn/Cu/Ag duels and a 14-metal ladder ('electrons fall from a metal atom to an ion on a lower rung') whose order is sorted from Chem.E0 without showing volts. Hydrogen gets a rung (metals in HCl), noble metals and the history of metal extraction mark the bottom, and a Li/Na/K energy bill (atomisation + ionisation − hydration) explains why ionisation energy alone mispredicts the order. Capstone: a mystery lab with six unlabelled metals (Mg, Zn, Fe, Pb, Cu, Ag) and their nitrate solutions; the learner runs dips, orders the letters and reveals the identities. Hooks for later lessons: the ladder picture maps directly onto the potential ladder, 'spontaneous = downhill' onto positive cell voltage, and 'force it uphill' onto electrolysis.",
+  "sources": [
+    { "title": "Wikipedia: Reactivity series", "url": "https://en.wikipedia.org/wiki/Reactivity_series" },
+    { "title": "Wikipedia: Single displacement reaction", "url": "https://en.wikipedia.org/wiki/Single_displacement_reaction" },
+    { "title": "OpenStax Chemistry 2e, 17.3 Electrode and Cell Potentials", "url": "https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials" },
+    { "title": "Wikipedia: Noble metal", "url": "https://en.wikipedia.org/wiki/Noble_metal" },
+    { "title": "Wikipedia: Timeline of chemical element discoveries", "url": "https://en.wikipedia.org/wiki/Timeline_of_chemical_element_discoveries" },
+    { "title": "Wikipedia: Standard enthalpy of formation (data table)", "url": "https://en.wikipedia.org/wiki/Standard_enthalpy_change_of_formation_(data_table)" },
+    { "title": "Atkins & de Paula, Physical Chemistry (data section)", "url": "" },
+    { "title": "Wikipedia: Hydration energy", "url": "https://en.wikipedia.org/wiki/Hydration_energy" }
+  ],
+  "engineWishes": [
+    "A shared Chem.beaker()/dip-scene helper (strip, ions, hopping electrons) so every lesson draws beakers the same way; this lesson carries its own ~130-line version.",
+    "A shared Chem.ladder() drawing of the activity/potential series with highlightable rungs: this lesson, electrode-potentials and corrosion all need it.",
+    "svg text { fill; font } in course.css overrides SVG presentation attributes, so custom-coloured text needs inline style; a note in AUTHORING.md would save time."
+  ]
+}

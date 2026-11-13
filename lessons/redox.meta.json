@@ -1,0 +1,43 @@
+{
+  "id": "redox",
+  "title": "Oxidation and reduction",
+  "steps": 9,
+  "concepts": [
+    { "key": "spectator", "label": "spectator ion", "definition": "An ion that is present in the solution but comes out of the reaction unchanged, such as sulfate when zinc reacts with copper sulfate." },
+    { "key": "netionic", "label": "net ionic equation", "definition": "The equation with the spectator ions left out, showing only what changes: Zn + Cu²⁺ → Zn²⁺ + Cu." },
+    { "key": "redox", "label": "redox reaction (electron transfer)", "definition": "A reaction in which electrons pass from one particle to another; equivalently (step 8), one in which oxidation numbers change." },
+    { "key": "oxidation", "label": "oxidation = losing electrons", "definition": "Loss of electrons by a particle; its charge (or oxidation number) goes up." },
+    { "key": "reduction", "label": "reduction = gaining electrons", "definition": "Gain of electrons by a particle; its charge (or oxidation number) goes down. Always paired with an oxidation." },
+    { "key": "half", "label": "half-reaction", "definition": "One side of a redox reaction written alone with its electrons shown, e.g. Zn → Zn²⁺ + 2e⁻ (oxidation) or Cu²⁺ + 2e⁻ → Cu (reduction); electrons released must equal electrons taken." },
+    { "key": "oxagent", "label": "oxidising agent", "definition": "The reactant that takes electrons from another, thereby oxidising it, and is itself reduced (Cu²⁺, Cl₂, O₂)." },
+    { "key": "redagent", "label": "reducing agent", "definition": "The reactant that gives electrons to another, thereby reducing it, and is itself oxidised (Zn, Na, Al)." },
+    { "key": "oxnum", "label": "oxidation number", "definition": "The charge an atom would have if every shared electron were assigned to the more electronegative atom; a bookkeeping label written sign first (+2, −2), not a real charge." },
+    { "key": "oxrules", "label": "oxidation-number rules", "definition": "Shortcuts: pure element 0; single-atom ion = its charge; group 1 +1, group 2 +2, F −1; H +1 and O −2 in almost all compounds; all numbers sum to the total charge." },
+    { "key": "oxchange", "label": "redox = oxidation numbers change", "definition": "Oxidation is a rise in oxidation number, reduction a fall; electrons moved = change in number × atoms that changed; no change anywhere means not redox." }
+  ],
+  "namedOnly": [
+    "shared electron pair / covalent bond (described as 'sharing', taught in Silicon and light)",
+    "peroxide (O at −1) and metal hydride (H at −1) as named exceptions",
+    "thermite reaction",
+    "permanganate, dichromate, lead dioxide (only as oxidation-number exercises)",
+    "acid (zinc in HCl appears in the capstone; taught in The activity series)",
+    "precipitation (AgCl 'white solid forms', as the non-redox contrast)",
+    "galvanic cell, alkaline cell, fuel cell (pointers only)"
+  ],
+  "summary": "Running example: a zinc strip in copper sulfate solution, Zn + Cu²⁺ → Zn²⁺ + Cu, seen first in a beaker (sulfate as spectator), then as two electrons hopping in one collision, then split into half-reactions and roles (Zn = reducing agent, Cu²⁺ = oxidising agent). Oxidation numbers are introduced through water (shared electrons handed to the more electronegative atom), then five rules and 'number up = oxidised'. Capstone: an oxidation-number sandbox with 7 reactions (Zn/CuSO₄, Na/Cl₂, Zn/HCl, H₂/O₂, thermite, the alkaline-cell reaction Zn + 2MnO₂ → ZnO + Mn₂O₃, and a non-redox AgNO₃ + NaCl trap). Hooks for later lessons: the two half-reactions of Zn/Cu²⁺ (galvanic cell), electrons-lost = electrons-gained (balancing), Cu + 2Ag⁺ and Fe + Cu²⁺ (activity series), Mn +4 → +3 and Pb +4 (batteries).",
+  "sources": [
+    { "title": "OpenStax, Chemistry 2e, §4.2 Classifying Chemical Reactions", "url": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions" },
+    { "title": "OpenStax, Chemistry 2e, §17.1 Review of Redox Chemistry", "url": "https://openstax.org/books/chemistry-2e/pages/17-1-review-of-redox-chemistry" },
+    { "title": "IUPAC Gold Book: oxidation state", "url": "https://goldbook.iupac.org/terms/view/O04365" },
+    { "title": "Karen, McArdle, Takats (2016), Comprehensive definition of oxidation state (IUPAC Recommendations 2016)", "url": "https://doi.org/10.1515/pac-2015-1204" },
+    { "title": "Wikipedia: Single displacement reaction", "url": "https://en.wikipedia.org/wiki/Single_displacement_reaction" },
+    { "title": "Wikipedia: Thermite", "url": "https://en.wikipedia.org/wiki/Thermite" },
+    { "title": "Wikipedia: Alkaline battery", "url": "https://en.wikipedia.org/wiki/Alkaline_battery" }
+  ],
+  "engineWishes": [
+    "A shared Chem.ox(n) formatter for oxidation numbers (sign first: +2, −2, 0) and Chem.ion(sym, q) for ion labels, so all lessons print them the same way.",
+    "A shared stepper control (− value +) in the engine; several chemistry lessons will need small integer inputs (coefficients, oxidation numbers).",
+    "Shared SVG particle helper (labelled circle with the course colour convention) plus a ticker/tween pair with automatic cleanup.",
+    "smoke.mjs takes mobile screenshots only for steps 1–2; a flag for all steps would help check hand-made SVG on phones."
+  ]
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electricity from the elements · a step-by-step course</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+  <div class="map">
+    <h1>Electricity from the elements</h1>
+    <p class="lead">Inorganic electrochemistry, from the atom to the battery. One or two new ideas per step, each built only from the ones before it. Every step ends with a small check that unlocks the next. Lessons are listed by section; the <b>recommended order</b> follows prerequisites (each lesson shows what it builds on).</p>
+    <p class="meta" id="meta"></p>
+    <div class="map-bar">
+      <a class="continue" id="continue" hidden></a>
+      <label class="map-toggle"><input type="checkbox" id="showdesc"> show descriptions</label>
+    </div>
+    <div id="secs"></div>
+  </div>
+  <script>
+    (async function () {
+      const course = await (await fetch("course.json")).json();
+      const ready = {};
+      await Promise.all(course.lessons.map(async (l) => {
+        try { const r = await fetch(`lessons/${l.id}.meta.json`); if (r.ok) ready[l.id] = await r.json(); } catch (e) {}
+      }));
+      const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+      const read = (k) => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; } };
+      const order = Object.fromEntries(course.lessons.map((l, i) => [l.id, i + 1]));
+      const byId = Object.fromEntries(course.lessons.map((l) => [l.id, l]));
+      const progress = {};
+      for (const l of course.lessons) {
+        const meta = ready[l.id]; if (!meta) continue;
+        const st = read("chemcourse:" + l.id);
+        const done = st && Array.isArray(st.done) ? st.done.length : 0;
+        progress[l.id] = { done, total: meta.steps, finished: done >= meta.steps, cur: st ? st.cur || 0 : 0 };
+      }
+      const root = document.getElementById("secs");
+      let doneLessons = 0;
+      for (const sec of course.sections) {
+        const lessons = course.lessons.filter((x) => x.section === sec.id);
+        const box = el("div", "sec");
+        const hd = el("h3"); hd.append(el("span", "n", sec.id), sec.title);
+        const written = lessons.filter((l) => ready[l.id]), fin = written.filter((l) => progress[l.id].finished).length;
+        doneLessons += fin;
+        if (written.length) {
+          const pr = el("span", "sec-prog", `${fin}/${written.length} done`);
+          const bar = el("span", "sec-bar"); const fill = el("i"); fill.style.width = (100 * fin / written.length) + "%"; bar.append(fill);
+          pr.prepend(bar); hd.append(pr);
+        }
+        box.append(hd);
+        const topics = el("div", "topics");
+        for (const l of lessons) {
+          const meta = ready[l.id];
+          const item = el("div", "topic-item");
+          const a = el(meta ? "a" : "span", "topic" + (l.star ? " star" : "") + (meta ? " ready" : " soon"), `${order[l.id]}. ${l.title}`);
+          const pre = l.prereqs.map((p) => byId[p]?.title || p);
+          const builds = pre.length ? "Builds on: " + pre.join(", ") : "Start here";
+          a.title = (l.scope ? l.scope + "\n\n" : "") + builds;
+          if (meta) {
+            a.href = `lesson.html?id=${l.id}`;
+            const pg = progress[l.id];
+            a.append(el("span", "badge", pg.finished ? "done" : pg.done ? `${pg.done}/${pg.total}` : "start →"));
+          } else a.title += " (not written yet)";
+          item.append(a);
+          if (l.scope) item.append(el("div", "desc", l.scope));
+          item.append(el("div", "desc builds", builds));
+          topics.append(item);
+        }
+        box.append(topics); root.append(box);
+      }
+      document.getElementById("meta").textContent = `${Object.keys(ready).length} of ${course.lessons.length} lessons written · ${doneLessons} completed by you · numbers = recommended order`;
+
+      // continue where you left off: the last lesson opened, else the first unfinished one in recommended order
+      const cont = document.getElementById("continue");
+      const last = read("chemcourse:last");
+      let target = null, label = "";
+      if (last && progress[last.id] && !progress[last.id].finished) {
+        target = last.id; label = `Continue: ${byId[last.id].title} · step ${Math.min((last.step || 0) + 1, progress[last.id].total)} of ${progress[last.id].total}`;
+      } else {
+        const started = Object.values(progress).some((p) => p.done);
+        const next = course.lessons.find((l) => progress[l.id] && !progress[l.id].finished && l.prereqs.every((p) => !progress[p] || progress[p].finished))
+          || course.lessons.find((l) => progress[l.id] && !progress[l.id].finished);
+        if (next) { target = next.id; label = (started ? "Next up: " : "Start here: ") + next.title; }
+      }
+      if (target) { cont.href = `lesson.html?id=${target}`; cont.textContent = label + " →"; cont.hidden = false; }
+
+      const cb = document.getElementById("showdesc");
+      const apply = () => { root.classList.toggle("with-desc", cb.checked); try { localStorage.setItem("chemcourse:mapdesc", cb.checked ? "1" : ""); } catch (e) {} };
+      cb.checked = localStorage.getItem("chemcourse:mapdesc") === "1";
+      cb.addEventListener("change", apply); apply();
+    })();
+  </script>
+</body>
+</html>

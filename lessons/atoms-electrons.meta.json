@@ -1,0 +1,44 @@
+{
+  "id": "atoms-electrons",
+  "title": "Atoms, electrons and charge",
+  "steps": 10,
+  "concepts": [
+    { "key": "charge", "label": "charge (+ / −)", "definition": "A property of particles that comes in two kinds, positive and negative: opposites attract, likes repel, more strongly the closer they are; electricity is charge that moves." },
+    { "key": "proton", "label": "proton", "definition": "A heavy particle in the nucleus with charge +1; protons never move in chemistry." },
+    { "key": "electron", "label": "electron", "definition": "A light particle around the nucleus with charge −1; the only particle that atoms exchange, so net charge = protons − electrons." },
+    { "key": "atomicNumber", "label": "atomic number Z", "definition": "The number of protons in the nucleus; it fixes which element the atom is, and a neutral atom has Z electrons." },
+    { "key": "shell", "label": "electron shell (2, 8, 8)", "definition": "Electrons sit in layers around the nucleus that fill from the inside out with 2, 8, 8 seats (a simplified model, valid for Z ≤ 20): Na is 2, 8, 1 and Cl is 2, 8, 7." },
+    { "key": "valence", "label": "valence electron", "definition": "An electron in the outermost occupied shell; the only electrons that take part in chemistry." },
+    { "key": "corePull", "label": "net pull on the outer shell", "definition": "Rough attraction felt by the valence electrons = protons − inner electrons (+1 for Na, +7 for Cl); an informal stand-in for shielding / effective nuclear charge." },
+    { "key": "fullShell", "label": "full shell (noble-gas configuration)", "definition": "An outer shell with every seat taken (2 / 2, 8 / 2, 8, 8, as in He, Ne, Ar): the stable arrangement, expensive to break into and with no seat for an extra electron." },
+    { "key": "ion", "label": "ion", "definition": "An atom whose electron count differs from its proton count, so it has a net charge, written as a superscript (Na⁺, Mg²⁺, Cl⁻)." },
+    { "key": "cation", "label": "cation (+)", "definition": "A positive ion, formed when an atom loses electrons: Na → Na⁺ + e⁻." },
+    { "key": "anion", "label": "anion (−)", "definition": "A negative ion, formed when an atom gains electrons: Cl + e⁻ → Cl⁻ (named with the ending -ide)." }
+  ],
+  "namedOnly": [
+    "neutron (uncharged, ignored)",
+    "nucleus (used as the place where protons sit)",
+    "element (atoms sharing one Z; used, not listed as a concept)",
+    "mole / kJ/mol (unit of the cost bars; defined in Ions, salts and electrolytes)",
+    "ionisation energy and electron affinity (shown as 'cost to remove' / 'energy released on adding', named in The periodic table)",
+    "sharing electrons / covalent bond (Silicon and light)",
+    "ionic packing into a salt crystal (Ions, salts and electrolytes)",
+    "acids and H⁺ (later lessons)",
+    "-ide names: chloride, fluoride, oxide, sulfide, hydride"
+  ],
+  "summary": "Running example: sodium (2, 8, 1) and chlorine (2, 8, 7) from a grain of table salt; Na → Na⁺ + e⁻, Cl + e⁻ → Cl⁻, then Na + Cl → Na⁺ + Cl⁻ with the ledger 496 kJ/mol paid, 349 returned, the rest covered by the ions attracting. Capstone: an ion workbench for Z = 1–20 where the learner strips or adds electrons and reads real per-electron costs (green valence bars, red full-shell wall), seeing which ions end on a noble-gas configuration cheaply. Hooks for later lessons: 'giver' vs 'taker' atoms, the net pull (+1 … +7) across a row and the cost-of-removal bars (lead into ionisation energy and electronegativity), 'only electrons move', charge is conserved, and 'route the electron through a wire and you have a current'.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §2.3 Atomic Structure and Symbolism", "url": "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism" },
+    { "title": "OpenStax Chemistry 2e, §6.4 Electronic Structure of Atoms", "url": "https://openstax.org/books/chemistry-2e/pages/6-4-electronic-structure-of-atoms-electron-configurations" },
+    { "title": "OpenStax Chemistry 2e, §6.5 Periodic Variations in Element Properties", "url": "https://openstax.org/books/chemistry-2e/pages/6-5-periodic-variations-in-element-properties" },
+    { "title": "Wikipedia: Molar ionization energies of the elements", "url": "https://en.wikipedia.org/wiki/Molar_ionization_energies_of_the_elements" },
+    { "title": "Wikipedia: Electron affinity (data page)", "url": "https://en.wikipedia.org/wiki/Electron_affinity_(data_page)" },
+    { "title": "Wikipedia: Proton-to-electron mass ratio", "url": "https://en.wikipedia.org/wiki/Proton-to-electron_mass_ratio" },
+    { "title": "OpenStax Chemistry 2e, §7.1 Ionic Bonding", "url": "https://openstax.org/books/chemistry-2e/pages/7-1-ionic-bonding" }
+  ],
+  "engineWishes": [
+    "A shared Chem.drawAtom(svg, {Z, electrons, ...}) shell-diagram helper (this lesson has a local one: drawAtom/slotPos/atomStage) so later lessons draw atoms and ions the same way",
+    "Chem.elements could carry successive ionisation energies (ie2..ie4) and electron affinity; this lesson embeds them locally for Z = 1-20",
+    "smoke.mjs --shots only captures mobile screenshots for steps 1-2; a flag for all steps would help check phone layout"
+  ]
+}

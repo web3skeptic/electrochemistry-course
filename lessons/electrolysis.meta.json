@@ -1,0 +1,48 @@
+{
+  "id": "electrolysis",
+  "title": "Electrolysis: forcing reactions uphill",
+  "steps": 10,
+  "concepts": [
+    { "key": "electrolytic", "label": "electrolysis / electrolytic cell", "definition": "Electrolysis is forcing a non-spontaneous redox reaction to run by applying an outside voltage larger than the cell's own push; a cell operated this way is an electrolytic cell and turns electrical energy into chemical energy." },
+    { "key": "signflip", "label": "electrolytic cell: cathode −, anode +", "definition": "Anode = oxidation and cathode = reduction in every cell, but in an electrolytic cell the cathode is the electrode wired to the source's negative terminal and the anode is positive, the opposite signs to a galvanic cell; cations still drift to the cathode and anions to the anode." },
+    { "key": "inert", "label": "inert electrode", "definition": "An electrode (graphite, platinum) that only conducts electrons in or out and is not itself oxidised or reduced." },
+    { "key": "decomp", "label": "decomposition voltage", "definition": "The minimum source voltage at which an electrolysis runs: E° of the couple at the anode minus E° of the couple at the cathode, i.e. −E°cell of the forced reaction (1.02 V for CuCl2 → Cu + Cl2, 1.23 V for water)." },
+    { "key": "faradaylaws", "label": "Faraday's laws of electrolysis", "definition": "The mass produced at an electrode is proportional to the charge passed, and for a given charge to M/n: mass = (I·t / nF) × M, with n electrons per atom or molecule and F = 96 485 C/mol." },
+    { "key": "waterel", "label": "water electrolysis", "definition": "2H2O → 2H2 + O2, forced with at least 1.23 V in water made conducting by an electrolyte: hydrogen forms at the cathode and half that volume of oxygen at the anode, 4 electrons per O2; the 1.23 V gap is the same in acid, neutral and basic solution." },
+    { "key": "gasvol", "label": "gas volume ∝ moles (24.5 L/mol)", "definition": "Equal numbers of molecules of any gas occupy equal volumes; one mole takes about 24.5 L at 25 °C and atmospheric pressure, so mole ratios of gases show up as volume ratios." },
+    { "key": "compete", "label": "competing electrode reactions", "definition": "When several species could react at an electrode (in water, the water itself is always a candidate), the cathode takes the one easiest to reduce (most positive E) and the anode the one easiest to oxidise (least positive E); hence metals above about Zn/Al on the ladder cannot be plated from water." },
+    { "key": "sluggish", "label": "sluggish gases need extra voltage", "definition": "Gas-forming electrode reactions (O2 especially, H2 on some metals such as zinc) are slow and only run at a useful rate when the electrode is pushed beyond its table potential, which can change the winner of a close competition (chlorine instead of oxygen from brine; zinc instead of hydrogen); the proper name is overpotential." },
+    { "key": "chloralkali", "label": "chlor-alkali process", "definition": "Industrial electrolysis of concentrated NaCl solution, 2NaCl + 2H2O → Cl2 + H2 + 2NaOH (minimum 2.19 V, run near 3 V), with a cation-selective membrane that lets Na⁺ cross and keeps chlorine and hydroxide apart (mixed, they form hypochlorite bleach)." },
+    { "key": "molten", "label": "molten-salt electrolysis", "definition": "Electrolysis of a melted ionic compound, where no water competes, so that very reactive metals can be made: molten NaCl gives sodium and chlorine (Downs cell, about 600 °C with CaCl2)." },
+    { "key": "hallheroult", "label": "Hall–Héroult process (aluminium)", "definition": "Aluminium production (1886) by electrolysing Al2O3 dissolved in molten cryolite Na3AlF6 near 960 °C: Al³⁺ + 3e⁻ → Al at the carbon-lined cathode while carbon anodes burn to CO2 (2Al2O3 + 3C → 4Al + 3CO2), about 4 V and 13–15 kWh per kg." },
+    { "key": "refining", "label": "electrorefining (anode slime)", "definition": "Purifying a metal by making the impure metal the anode and pure metal the cathode at a small voltage (copper: about 0.3 V, decomposition voltage 0): less noble impurities dissolve and stay in solution, more noble ones (Ag, Au) fall off as anode slime, and only the wanted metal plates." },
+    { "key": "plating", "label": "electroplating", "definition": "Coating an object by making it the cathode in a solution of the coating metal's ions, usually with an anode of that metal; the layer thickness follows from Faraday's law: mass ÷ (density × area)." }
+  ],
+  "namedOnly": [
+    "overpotential (the proper name for the 'extra voltage for sluggish gases'; taught in Real batteries)",
+    "fuel cell (water electrolysis reversed; pointer to Hydrogen and fuel cells)",
+    "Downs cell (named as the molten-NaCl example)",
+    "cryolite Na3AlF6 (the solvent melt, by function only)",
+    "sodium hypochlorite / bleach (what forms without the membrane: Cl2 + 2OH⁻ → Cl⁻ + ClO⁻ + H2O)",
+    "peroxodisulfate S2O8²⁻ (+2.01 V, only to show that sulfate is not oxidised)",
+    "neutral water [H⁺] = 10⁻⁷ mol/L (stated as a fact; water levels −0.41 V and +0.82 V from Nernst)",
+    "zinc–bromine battery (one-line aside in a check)",
+    "current density (mA per cm² in the plating calculator)",
+    "constant-current supply / current rising with excess voltage (capstone simplification note)"
+  ],
+  "summary": "Running example: the Daniell cell and the 6.54 g zinc strip from earlier lessons, now with a voltage source wired against the cell (below 1.10 V it discharges, above it recharges), then the same bench (source on top, − terminal always on the left electrode = cathode) with CuCl2, acidified water, brine, molten NaCl, an aluminium pot and a copper refinery. Capstone: an electrolysis bench with seven cells (CuSO4 with graphite or copper electrodes, dilute H2SO4, brine, molten NaCl, Al2O3 in cryolite, silver plating) where the learner sets voltage, current and time, predicts both electrode products and then gets products, masses, gas volumes and the split of energy into minimum (Vmin × Q) and heat. Hooks for later lessons: water electrolysis at 1.23 V and its reversal (fuel cells), 'charging = the same cell with the names anode/cathode swapped but + and − unchanged' (lead–acid, Li-ion), hydrogen evolution competing with metal deposition (overcharge/gassing, why aqueous cells are limited to low voltages), 'extra voltage for slow reactions' (overpotential), and m = ItM/nF.",
+  "sources": [
+    { "title": "OpenStax, Chemistry 2e, §17.7 Electrolysis", "url": "https://openstax.org/books/chemistry-2e/pages/17-7-electrolysis" },
+    { "title": "OpenStax, Chemistry 2e, Appendix L: Standard Electrode (Half-Cell) Potentials", "url": "https://openstax.org/books/chemistry-2e/pages/l-standard-electrode-half-cell-potentials" },
+    { "title": "Wikipedia: Faraday's laws of electrolysis", "url": "https://en.wikipedia.org/wiki/Faraday%27s_laws_of_electrolysis" },
+    { "title": "Wikipedia: Electrolysis of water", "url": "https://en.wikipedia.org/wiki/Electrolysis_of_water" },
+    { "title": "Wikipedia: Chloralkali process", "url": "https://en.wikipedia.org/wiki/Chloralkali_process" },
+    { "title": "Wikipedia: Downs cell", "url": "https://en.wikipedia.org/wiki/Downs_cell" },
+    { "title": "Wikipedia: Hall–Héroult process", "url": "https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process" },
+    { "title": "Wikipedia: Electrowinning (and electrorefining)", "url": "https://en.wikipedia.org/wiki/Electrowinning" }
+  ],
+  "engineWishes": [
+    "hbars: allow fmtv to receive the row index (or a separate display value) so bars can be normalised while the labels show real units",
+    "a shared Chem drawing helper for an electrolysis/galvanic bench (vessel, electrodes, source, drifting ions, bubbles) would avoid each lesson re-implementing it"
+  ]
+}

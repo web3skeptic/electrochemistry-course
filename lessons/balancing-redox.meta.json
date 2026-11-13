@@ -1,0 +1,34 @@
+{
+  "id": "balancing-redox",
+  "title": "Balancing redox equations",
+  "steps": 9,
+  "concepts": [
+    { "key": "coeff", "label": "coefficient (balanced equation)", "definition": "The whole number in front of a formula saying how many of that particle take part; balancing an equation means choosing coefficients (never subscripts) so both sides match." },
+    { "key": "chargecons", "label": "charge conservation", "definition": "A reaction only moves electrons around, so the total charge of the left side must equal the total charge of the right side, just as every atom must appear on both sides." },
+    { "key": "ebal", "label": "electrons balance a half-reaction", "definition": "In a half-reaction the electrons (charge −1 each) are written out, and the right number is the one that makes the charge equal on both sides; on the right they mark oxidation, on the left reduction." },
+    { "key": "hrm", "label": "half-reaction method", "definition": "Balance a redox equation by splitting it into an oxidation half and a reduction half, balancing each in atoms and charge, scaling them so the electrons match, and adding." },
+    { "key": "n", "label": "electrons transferred (n)", "definition": "The number of electrons that cancel when the scaled half-reactions are added, i.e. how many electrons move per balanced equation as written (6 for 2Al + 3Cu²⁺, 5 for MnO₄⁻ + 5Fe²⁺)." },
+    { "key": "balO", "label": "balance O with H₂O", "definition": "In water solution, oxygen atoms missing on one side of a half-reaction are supplied by adding H₂O molecules to that side." },
+    { "key": "acid", "label": "acidic solution (H⁺ available)", "definition": "Water containing plenty of H⁺ ions (e.g. from dissolved sulfuric acid), so H⁺ and H₂O are free building blocks for balancing." },
+    { "key": "balH", "label": "balance H with H⁺", "definition": "In acidic solution, after balancing O with water, hydrogen atoms are balanced by adding H⁺ to the side that is short, and only then is charge balanced with electrons." },
+    { "key": "oxcheck", "label": "electron count = oxidation-number change", "definition": "Cross-check: the electrons in a balanced half-reaction equal the change in oxidation number times the number of atoms that change (Mn +7 → +2 is 5 e⁻; two Cr +6 → +3 is 6 e⁻)." },
+    { "key": "base", "label": "basic solution (OH⁻ available)", "definition": "Water containing plenty of OH⁻ ions (e.g. dissolved KOH) and almost no free H⁺, because H⁺ + OH⁻ → H₂O; equations for base may contain H₂O and OH⁻ but not H⁺." },
+    { "key": "ohfix", "label": "convert to base with OH⁻", "definition": "Balance as in acid, then add one OH⁻ per H⁺ to both sides, merge each H⁺ + OH⁻ pair into H₂O and cancel water that appears on both sides." },
+    { "key": "net", "label": "net reaction (cancel both sides)", "definition": "The equation left after cancelling every particle that appears on both sides of the summed half-reactions; it lists only what is truly consumed and produced." }
+  ],
+  "namedOnly": ["least common multiple", "permanganate / dichromate as oxidising agents (colours only)", "alkaline cell (taught in zinc-batteries)", "lead–acid battery (taught in lead-acid)", "rusting (taught in corrosion)", "metals dissolving in acid (taught in activity-series)", "nitric oxide NO"],
+  "summary": "Running examples: aluminium in copper sulfate (2Al + 3Cu²⁺ → 2Al³⁺ + 3Cu, n = 6) for charge conservation and scaling, then MnO₄⁻ + 8H⁺ + 5Fe²⁺ → Mn²⁺ + 4H₂O + 5Fe³⁺ (n = 5) for the acid recipe, then the alkaline-cell halves Zn + 2OH⁻ → ZnO + H₂O + 2e⁻ and 2MnO₂ + H₂O + 2e⁻ → Mn₂O₃ + 2OH⁻ for base. The capstone is a balancing bench: seven skeleton equations (incl. Cu + nitric acid, rusting, alkaline cell, lead–acid) with coefficient steppers and a live atom/charge ledger. Hooks for later lessons: n per balanced equation, half-reactions written with explicit electrons, 'net reaction' showing that the alkaline cell does not consume OH⁻ while lead–acid and permanganate consume H⁺.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §17.1 Review of Redox Chemistry", "url": "https://openstax.org/books/chemistry-2e/pages/17-1-review-of-redox-chemistry" },
+    { "title": "OpenStax Chemistry 2e, §4.2 Classifying Chemical Reactions", "url": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions" },
+    { "title": "LibreTexts: Balancing Redox Reactions", "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Electrochemistry/Redox_Chemistry/Balancing_Redox_reactions" },
+    { "title": "Wikipedia: Half-reaction", "url": "https://en.wikipedia.org/wiki/Half-reaction" },
+    { "title": "Wikipedia: Alkaline battery", "url": "https://en.wikipedia.org/wiki/Alkaline_battery" },
+    { "title": "Wikipedia: Lead–acid battery", "url": "https://en.wikipedia.org/wiki/Lead%E2%80%93acid_battery" }
+  ],
+  "engineWishes": [
+    "Chem.parse(formula) → { atoms, charge } and Chem.balance(eqString) → per-element/charge tallies: this lesson carries its own parser, and later lessons that show equations could self-check them.",
+    "A shared 'equation with coefficient steppers + live ledger' widget (this lesson's editor()/ledger()) would be reusable in electrolysis and battery lessons.",
+    "smoke.mjs takes mobile screenshots of steps 1–2 only; a flag for all steps would help check wrapping of wide equations."
+  ]
+}

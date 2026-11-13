@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electrochemistry</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/course.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="side" id="side"></aside>
+    <main class="main" id="main"><p class="note">Loading lesson…</p></main>
+  </div>
+  <script src="assets/course.js"></script>
+  <script src="assets/chem.js"></script>
+  <script>
+    (function () {
+      const id = new URLSearchParams(location.search).get("id") || "atoms-electrons";
+      if (!/^[a-z0-9-]+$/.test(id)) { document.getElementById("main").textContent = "Bad lesson id."; return; }
+      const sc = document.createElement("script");
+      sc.src = "lessons/" + id + ".js";
+      sc.onerror = () => { document.getElementById("main").innerHTML = '<p>This lesson isn\'t written yet. <a href="index.html">Back to the map</a></p>'; };
+      document.body.append(sc);
+    })();
+  </script>
+</body>
+</html>

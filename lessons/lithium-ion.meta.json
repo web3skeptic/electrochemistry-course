@@ -1,0 +1,46 @@
+{
+  "id": "lithium-ion",
+  "title": "Lithium: the lightest metal and the ion that shuttles",
+  "steps": 10,
+  "concepts": [
+    { "key": "liwin", "label": "lithium: lowest E°, lightest metal", "definition": "Lithium has the most negative standard potential (−3.04 V) and the lowest molar mass of any metal (6.94 g/mol), so it gives the most volts and the most charge per gram (about 3860 mAh/g)." },
+    { "key": "window", "label": "water stability window", "definition": "The 1.23 V range of electrode potentials between water's hydrogen edge (2H⁺ + 2e⁻ → H₂) and oxygen edge (O₂ + 4H⁺ + 4e⁻ → 2H₂O); both edges shift 59 mV per tenfold change in [H⁺], and outside the window water is reduced to H₂ or oxidised to O₂ (slow gas evolution lets some cells stretch it to about 2 V)." },
+    { "key": "nonaq", "label": "non-aqueous electrolyte", "definition": "An electrolyte with no water: a lithium salt such as LiPF₆ (Li⁺ and PF₆⁻) dissolved in a water-free solvent whose stability window exceeds 4 V, as required by 3–4 V lithium cells." },
+    { "key": "limetal", "label": "lithium-metal primary cell (Li–MnO₂)", "definition": "A non-rechargeable cell with a lithium metal anode and a manganese dioxide cathode, Li + MnO₂ → LiMnO₂ (Mn +4 → +3), about 3 V; the CR2032 coin cell (about 225 mAh)." },
+    { "key": "dendrite", "label": "dendrite", "definition": "A needle of lithium metal that grows when lithium is plated during charging, because protruding spots collect more ions; it can pierce the separator and short-circuit the cell." },
+    { "key": "intercal", "label": "intercalation", "definition": "Reversible insertion of a guest ion (Li⁺) into empty seats of a solid, with the matching electron going to the solid, while the solid keeps its structure." },
+    { "key": "host", "label": "host lattice", "definition": "The solid framework (graphite sheets, a layered oxide, an iron phosphate framework) that provides the seats for intercalated Li⁺ and takes up or gives back the electrons." },
+    { "key": "graphite", "label": "graphite anode (LiC₆)", "definition": "The standard lithium-ion negative electrode: stacked carbon sheets that take up one lithium per six carbons, C₆ + Li⁺ + e⁻ ⇌ LiC₆, 372 mAh/g, about 0.1 V from lithium metal, swelling about 10%." },
+    { "key": "layered", "label": "layered oxide cathode (LiCoO₂, LCO)", "definition": "A cathode host made of metal–oxygen sheets with lithium between them; in LiCoO₂ removing Li⁺ raises cobalt from +3 towards +4 and only about half the lithium can be removed reversibly (about 140 mAh/g, cell about 3.7 V, 4.2 V full)." },
+    { "key": "rocking", "label": "rocking-chair mechanism", "definition": "The working principle of a lithium-ion cell: the same Li⁺ ions shuttle between two host lattices (graphite and a cathode host) through the electrolyte while electrons take the wire; lithium stays +1 and the hosts do the redox." },
+    { "key": "nmc", "label": "NMC (mixed layered oxide)", "definition": "LiNiₓMnᵧCo_zO₂, a layered oxide in which most cobalt is replaced by nickel (which does most of the redox) and manganese (which stays +4 and stabilises); about 3.7 V and roughly 160–200 usable mAh/g." },
+    { "key": "lfp", "label": "LFP (LiFePO₄)", "definition": "Lithium iron phosphate, a non-layered phosphate framework cathode: LiFePO₄ ⇌ FePO₄ + Li⁺ + e⁻ (Fe +2 ⇌ +3), 170 mAh/g theoretical, a flat cell voltage near 3.3 V, cheap, long-lived and the safest common cathode." },
+    { "key": "sei", "label": "SEI layer", "definition": "The solid electrolyte interphase: a nanometre-thin film of lithium salts formed on graphite during the first charge by reduction of the electrolyte; it conducts Li⁺ but blocks electrons, so it stops further breakdown, at the cost of 5–10% of the lithium and slow capacity fade." }
+  ],
+  "namedOnly": [
+    "organic solvent of the electrolyte (described only as 'a water-free solvent')",
+    "staging of graphite / LiC₁₂ (every second gap fills first)",
+    "olivine structure of LiFePO₄ (described as a framework with tunnels)",
+    "thermal runaway (described as oxygen release and heat on overcharge)",
+    "protection circuit / battery management (stops charge at 4.2 V, discharge at 3.0 V)",
+    "internal resistance, rate and practical Wh/kg (pointer to Real batteries)",
+    "aluminium / magnesium anodes and sodium-ion (pointer to Beyond lithium-ion)",
+    "passivation of aluminium (pointer to Corrosion, as an analogy for the SEI)",
+    "Whittingham, Goodenough, Yoshino; Nobel Prize 2019; first commercial cells 1991"
+  ],
+  "summary": "Running example: 0.100 mol of lithium (0.694 g, 2.68 Ah), the counterpart of the 6.54 g zinc strip, followed from bare metal (CR2032 Li–MnO₂ coin cell, dendrites on recharge) into a graphite host (7.21 g of carbon, LiC₆, 372 mAh/g) and a cathode host (LCO 19.6 g, NMC, LFP). A reusable cell picture shows 12 lithium dots moving one at a time through the electrolyte while electrons take the wire; the water stability window is drawn on the potential ladder with Nernst-shifted edges. Capstone: a rocking-chair simulator with switchable cathode (LCO / NMC / LFP), voltage read from host fill level (simplified curves), energy stored, a protection circuit that can be turned off to overcharge into lithium plating; later lessons can reuse the ideal voltage-vs-state-of-charge curves (no resistance yet) and the usable mAh/g figures.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §17.5 Batteries and Fuel Cells", "url": "https://openstax.org/books/chemistry-2e/pages/17-5-batteries-and-fuel-cells" },
+    { "title": "Goodenough & Park (2013), The Li-Ion Rechargeable Battery: A Perspective", "url": "https://doi.org/10.1021/ja3091438" },
+    { "title": "Nobel Prize in Chemistry 2019: scientific background", "url": "https://www.nobelprize.org/prizes/chemistry/2019/advanced-information/" },
+    { "title": "Wikipedia: Lithium-ion battery", "url": "https://en.wikipedia.org/wiki/Lithium-ion_battery" },
+    { "title": "Wikipedia: Lithium iron phosphate", "url": "https://en.wikipedia.org/wiki/Lithium_iron_phosphate" },
+    { "title": "Wikipedia: Solid electrolyte interphase", "url": "https://en.wikipedia.org/wiki/Solid_electrolyte_interphase" },
+    { "title": "Wikipedia: Button cell", "url": "https://en.wikipedia.org/wiki/Button_cell" },
+    { "title": "Peled (1979), J. Electrochem. Soc. 126, 2047", "url": "https://doi.org/10.1149/1.2128859" }
+  ],
+  "engineWishes": [
+    "A shared 'intercalation cell' drawing (two hosts, electrolyte, wire, movable ion dots) in assets would let battery-performance and beyond-lithium reuse the picture built here.",
+    "Chem.f() cannot subscript fractional stoichiometry (Li0.5CoO2) or variables (LixC6); a syntax such as Li_{0.5} or Li_x would help."
+  ]
+}

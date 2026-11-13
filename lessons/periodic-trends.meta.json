@@ -1,0 +1,43 @@
+{
+  "id": "periodic-trends",
+  "title": "The periodic table: who gives, who takes",
+  "steps": 9,
+  "concepts": [
+    { "key": "period", "label": "period", "definition": "A row of the periodic table; the period number is the number of electron shells that hold electrons." },
+    { "key": "group", "label": "group", "definition": "A column of the periodic table (numbered 1–18); its members have the same number of valence electrons (group number for groups 1–2, group − 10 for groups 13–18)." },
+    { "key": "noble", "label": "noble gas", "definition": "A group-18 element (He, Ne, Ar, Kr …) with a full outer shell, which neither gives nor takes electrons." },
+    { "key": "alkali", "label": "alkali metal", "definition": "A group-1 element below hydrogen (Li, Na, K, Cs …) with one valence electron beyond a full shell, which it gives away easily to form a 1+ ion." },
+    { "key": "halogen", "label": "halogen", "definition": "A group-17 element (F, Cl, Br, I) one electron short of a full shell, which readily takes one electron to form a 1− ion." },
+    { "key": "ie", "label": "ionisation energy", "definition": "The energy cost (kJ/mol) of removing the most loosely held electron from an isolated atom: X → X⁺ + e⁻; low for givers, high for takers and noble gases." },
+    { "key": "core", "label": "core charge (simplified)", "definition": "Protons minus inner-shell electrons: the net positive charge an outer electron feels in the simple shell model; with distance it explains why ionisation energy and electronegativity rise across a period and fall down a group." },
+    { "key": "en", "label": "electronegativity", "definition": "A unitless score (Pauling scale, about 0.8–4.0) for how strongly an atom pulls on electrons when it meets another atom; electrons drift toward the higher value and a large gap means transfer." },
+    { "key": "metal", "label": "metal", "definition": "An element with low ionisation energy and low electronegativity (left and bottom of the table) that gives electrons and forms cations." },
+    { "key": "nonmetal", "label": "non-metal", "definition": "An element with high ionisation energy and high electronegativity (upper right of the table, plus hydrogen) that takes or shares electrons and forms anions." },
+    { "key": "ioncharge", "label": "typical ion charge", "definition": "The charge an element usually carries as an ion: metals lose all valence electrons (groups 1, 2, 13 → 1+, 2+, 3+), non-metals gain enough to fill the shell (groups 15, 16, 17 → 3−, 2−, 1−)." },
+    { "key": "transition", "label": "transition metal", "definition": "A metal in groups 3–12 (Fe, Cu, Zn …) with 1–2 outer electrons over a growing inner shell; usually forms 2+ ions and often has a second common charge (Fe²⁺/Fe³⁺, Cu⁺/Cu²⁺)." }
+  ],
+  "namedOnly": [
+    "mole (kJ/mol used only as a unit for comparison; defined in Ions, salts and electrolytes)",
+    "Pauling scale",
+    "semimetal / borderline elements (B, Si, Ge, As)",
+    "electron sharing / covalent bond (pointer to Silicon and light)",
+    "successive ionisation energies (shown as a chart, not named as a concept)",
+    "hydride ion H⁻ (capstone aside)",
+    "activity series (pointer: gold and platinum as reluctant givers)"
+  ],
+  "summary": "Running example: sodium and chlorine from Atoms, electrons and charge, now located in the table (group 1 vs group 17) and given numbers: ionisation energy 496 vs 1251 kJ/mol, electronegativity 0.93 vs 3.16, core charge +1 vs +7. The capstone is a full periodic table (all Chem.elements) recolourable by class, valence, ionisation energy, electronegativity or typical ion, plus a 'pick a giver and a taker' experiment that animates the electron transfer, sets the atom ratio so electrons given = electrons taken, and explains failures (two metals, two non-metals, noble gas, roles reversed). Hooks for later lessons: typical ion charges and the 'atoms team up until charges cancel' picture (ionic formulas), metals as givers with gold/platinum as reluctant ones (activity series), Li and F as the extreme giver and taker (electrode potentials), silicon as a fence-sitter that shares (solar cells), light elements giving several electrons (specific capacity).",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §2.5 The Periodic Table", "url": "https://openstax.org/books/chemistry-2e/pages/2-5-the-periodic-table" },
+    { "title": "OpenStax Chemistry 2e, §6.5 Periodic Variations in Element Properties", "url": "https://openstax.org/books/chemistry-2e/pages/6-5-periodic-variations-in-element-properties" },
+    { "title": "OpenStax Chemistry 2e, §7.2 Covalent Bonding", "url": "https://openstax.org/books/chemistry-2e/pages/7-2-covalent-bonding" },
+    { "title": "OpenStax Chemistry 2e, §2.6 Ionic and Molecular Compounds", "url": "https://openstax.org/books/chemistry-2e/pages/2-6-ionic-and-molecular-compounds" },
+    { "title": "Wikipedia: Ionization energies of the elements (data page)", "url": "https://en.wikipedia.org/wiki/Ionization_energies_of_the_elements_(data_page)" },
+    { "title": "Wikipedia: Electronegativity", "url": "https://en.wikipedia.org/wiki/Electronegativity" }
+  ],
+  "engineWishes": [
+    "A shared Chem.drawAtom(svg, cx, cy, sym, {shells}) shell-model atom and a Chem.ptable({syms, layout, onclick}) periodic-table grid: every section-0 lesson will otherwise re-implement them.",
+    "Chem.elements could carry a metal / non-metal / semimetal class and the typical ion charge(s), so lessons agree on them (this lesson defines its own NONMETAL / SEMI / TYP tables).",
+    "The smoke harness only clicks <button>s, so clickable SVG cells (table cells, bar columns) are never exercised; a data-poke attribute or clicking svg [style*=cursor:pointer] would cover them.",
+    "Number checks reject the Unicode minus sign (−2 parses as NaN), which makes negative-charge answers awkward."
+  ]
+}

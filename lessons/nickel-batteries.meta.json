@@ -1,0 +1,44 @@
+{
+  "id": "nickel-batteries",
+  "title": "Nickel: NiCd and NiMH",
+  "steps": 10,
+  "concepts": [
+    { "key": "nioh", "label": "nickel oxyhydroxide electrode", "definition": "The positive electrode of all nickel cells: solid NiO(OH) takes one electron and one H from water to become solid Ni(OH)2 (Ni +3 to +2), NiO(OH) + H2O + e- <-> Ni(OH)2 + OH-, E° = +0.49 V in base, 289 mAh per gram of Ni(OH)2." },
+    { "key": "nicd", "label": "NiCd cell", "definition": "A rechargeable cell with a cadmium anode (Cd + 2OH- -> Cd(OH)2 + 2e-, -0.81 V) and a NiO(OH) cathode in KOH: Cd + 2NiO(OH) + 2H2O <-> Cd(OH)2 + 2Ni(OH)2, E° = 1.30 V, about 1.2 V in use." },
+    { "key": "koh", "label": "electrolyte not consumed (KOH)", "definition": "In nickel cells the OH- used at the negative electrode is returned at the nickel electrode, so the KOH concentration stays almost constant; the electrolyte is a carrier, not a reactant, and cannot reveal the state of charge." },
+    { "key": "flat", "label": "flat discharge curve", "definition": "A voltage that stays on a plateau (about 1.2 V for nickel cells) for most of the discharge and drops sharply only at the end, because solids convert into solids while the electrolyte stays unchanged; contrast the steadily sliding curve of an alkaline primary cell." },
+    { "key": "memory", "label": "memory effect", "definition": "After many identical partial discharge/recharge cycles a NiCd cell delivers the unused part of its charge at a lower voltage (a step in the curve), which a device reads as lost capacity; a full discharge and charge largely restores it." },
+    { "key": "mh", "label": "metal hydride (hydrogen storage alloy)", "definition": "An alloy such as LaNi5 that holds hydrogen atoms in the gaps between its metal atoms (up to LaNi5H6, 372 mAh/g); as an electrode in KOH it reacts MH + OH- <-> M + H2O + e- at about -0.83 V." },
+    { "key": "nimh", "label": "NiMH cell", "definition": "A rechargeable cell with a metal hydride anode and a NiO(OH) cathode in KOH: MH + NiO(OH) <-> M + Ni(OH)2, one H atom per electron moving between the two solids, E° = 1.32 V, about 1.2 V in use." },
+    { "key": "selfd", "label": "self-discharge", "definition": "The slow loss of stored charge in an unused cell through side reactions inside it (for example NiO(OH) oxidising OH- to O2), expressed in per cent per month, faster when warm and reversed by recharging." },
+    { "key": "cycle", "label": "cycle life", "definition": "The number of full charge-discharge cycles a rechargeable cell survives before its capacity has fallen to 80% of the original value." },
+    { "key": "nife", "label": "nickel–iron (Edison) cell", "definition": "A NiO(OH) cathode with an iron anode (Fe + 2OH- -> Fe(OH)2 + 2e-, about -0.88 V): very long-lived and cheap, but iron lies above the H2O/H2 rung so charging also makes hydrogen gas." },
+    { "key": "nih2", "label": "nickel–hydrogen cell", "definition": "A NiO(OH) cathode with pressurised hydrogen gas as the anode reactant (H2 + 2NiO(OH) <-> 2Ni(OH)2), used in satellites for its tens of thousands of cycles." }
+  ],
+  "namedOnly": [
+    "internal voltage loss under load (used in the capstone model as ohms per ampere; taught in Real batteries as internal resistance)",
+    "voltage depression from overcharging (mentioned as the commoner look-alike of the memory effect)",
+    "low-self-discharge NiMH (2005; one curve in the self-discharge widget)",
+    "molar volume of a gas (about 24.8 L/mol at 25 °C and 1 bar, stated as a fact)",
+    "lanthanum and mixed rare-earth alloys (LaNi5 as the example alloy; La mass 138.9 g/mol given locally)",
+    "oxygen recombination in sealed cells (not covered)",
+    "water stability limit for very negative electrodes (pointer to the lithium lesson)",
+    "platinum-coated hydrogen electrode (catalyst is taught in Hydrogen and fuel cells)"
+  ],
+  "summary": "Running example: an AA cell that stores 2.0 Ah (0.0746 mol of electrons, about 6.9 g of Ni(OH)2 at 289 mAh/g), built first as NiCd and then as NiMH around the same NiO(OH)/Ni(OH)2 electrode (Ni +3 <-> +2, +0.49 V) in KOH. An animated sealed cell with tile electrodes and an OH-/water ledger shows that the electrolyte is only borrowed (contrast with lead-acid), which leads to the flat 1.2 V discharge curve, the memory effect, hydrogen stored in LaNi5-type alloy, self-discharge (NiO(OH) lies below the O2/OH- rung) and cycle life, plus NiFe and NiH2 as other partners on the potential ladder. Capstone: an AA shoot-out simulator (alkaline primary, NiCd, NiMH x radio, torch, camera flash, with shelf months and repeated runs) plotting terminal voltage vs time and counting cells bought. Hooks for later lessons: 'one H per electron shuttles between two host solids' (rocking-chair preview for lithium-ion), the water rung as the limit for aqueous anodes, load-dependent voltage loss (Real batteries), typical Wh/kg of NiCd and NiMH.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, 17.5 Batteries and Fuel Cells", "url": "https://openstax.org/books/chemistry-2e/pages/17-5-batteries-and-fuel-cells" },
+    { "title": "Wikipedia: Nickel–cadmium battery", "url": "https://en.wikipedia.org/wiki/Nickel%E2%80%93cadmium_battery" },
+    { "title": "Wikipedia: Nickel–metal hydride battery", "url": "https://en.wikipedia.org/wiki/Nickel%E2%80%93metal_hydride_battery" },
+    { "title": "Wikipedia: Nickel–iron battery", "url": "https://en.wikipedia.org/wiki/Nickel%E2%80%93iron_battery" },
+    { "title": "Wikipedia: Nickel–hydrogen battery", "url": "https://en.wikipedia.org/wiki/Nickel%E2%80%93hydrogen_battery" },
+    { "title": "Wikipedia: Memory effect", "url": "https://en.wikipedia.org/wiki/Memory_effect" },
+    { "title": "Energizer E91 product data sheet", "url": "https://data.energizer.com/pdfs/e91.pdf" }
+  ],
+  "engineWishes": [
+    "A shared sealed-cell drawing (two tile electrodes, separator, wire with device/charger, drifting ions, travelling electrons) with discharge/charge modes: this lesson's makeCell()/cellPanel() would also suit lead-acid, alkaline and lithium-ion lessons.",
+    "A shared Chem.ladder(rungs, drop) mini potential ladder with label de-collision (written locally here as ladder()).",
+    "Chem.E0 could carry Fe(OH)2/Fe in base (about -0.88 V) and Chem.elements could carry lanthanum, so nickel-iron and LaNi5 numbers come from the shared table.",
+    "A small animation helper in the engine (move a node along a polyline, timers with automatic cleanup): written locally as animator()."
+  ]
+}

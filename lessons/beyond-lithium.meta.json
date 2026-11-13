@@ -1,0 +1,50 @@
+{
+  "id": "beyond-lithium",
+  "title": "Beyond lithium-ion: sodium, sulfur, solid state and flow",
+  "steps": 10,
+  "concepts": [
+    { "key": "abundance", "label": "crustal abundance as a design constraint", "definition": "The grams of an element in one tonne of average crustal rock (ppm by mass); with volts and mAh/g it is the third number a battery element is judged on (Li 20, Na 23,600, S 350, V 120 ppm)." },
+    { "key": "naion", "label": "sodium-ion cell", "definition": "A rocking-chair intercalation cell in which Na⁺ instead of Li⁺ shuttles between two hosts (hard carbon and a sodium-containing cathode frame): about 0.3 V and roughly 10% of cathode capacity lower than its lithium twin, but made from an element a thousand times more abundant." },
+    { "key": "lis", "label": "lithium–sulfur cell", "definition": "A cell with a lithium metal anode and a host-free sulfur cathode that is converted rather than intercalated, S₈ + 16Li → 8Li₂S: two electrons per sulfur atom, 1672 mAh per gram of sulfur at about 2.2 V." },
+    { "key": "shuttle", "label": "polysulfide shuttle", "definition": "Dissolved long-chain polysulfide anions drift to the lithium anode, are reduced there directly, and drift back to the cathode to be re-oxidised, carrying electrons through the electrolyte instead of the wire: low coulombic efficiency, self-discharge and loss of sulfur." },
+    { "key": "solid", "label": "solid electrolyte", "definition": "A rigid crystal (oxide or sulfide ceramic) with empty sites through which one kind of ion hops while electrons are blocked; it replaces the liquid electrolyte and is meant to make a lithium metal anode usable." },
+    { "key": "multi", "label": "multivalent ion", "definition": "An ion carrying more than one charge, such as Mg²⁺ or Al³⁺: more electrons per atom (n = 2 or 3 in mAh/g = nF/3.6M), but the higher charge binds it to the host and makes it move very slowly through solids." },
+    { "key": "vox", "label": "vanadium oxidation states", "definition": "Vanadium is stable in acidic water as V²⁺ (+2, violet), V³⁺ (+3, green), VO²⁺ (+4, blue) and VO₂⁺ (+5, yellow); the couples V³⁺/V²⁺ (−0.26 V) and VO₂⁺/VO²⁺ (+1.00 V) are 1.26 V apart." },
+    { "key": "flow", "label": "redox flow battery", "definition": "A battery whose charge is stored as dissolved ions in two external tanks and converted at inert electrodes in a separate stack with an ion-conducting membrane, so energy (tank volume) and power (stack size) are sized independently; the all-vanadium version uses the same element in both tanks." },
+    { "key": "molten", "label": "molten-electrode (high-temperature) cell", "definition": "A cell run hot enough that its electrodes are liquid, such as the sodium–sulfur cell (molten Na | solid beta-alumina Na⁺ conductor | molten S, about 300 °C, about 2 V) or a liquid-metal battery of three self-separating liquid layers." }
+  ],
+  "namedOnly": [
+    "hard carbon (the disordered carbon anode of sodium-ion cells)",
+    "conversion reaction (electrode rebuilt rather than intercalated)",
+    "lithium nitrate additive",
+    "LLZO, Li₆PS₅Cl, Li₁₀GeP₂S₁₂ (example solid electrolytes, by formula only)",
+    "semi-solid-state cells",
+    "sodium beta-alumina",
+    "hydrogen sulfide H₂S from sulfide electrolytes and moisture",
+    "ΔG of formation (used in the capstone as 'the tabulated energy released when the elements combine')",
+    "lithium–air, aluminium–air, zinc–chlorine and sodium–nickel-chloride cells (capstone status notes)",
+    "volumetric capacity mAh/cm³ (recalled from Real batteries)"
+  ],
+  "summary": "Running example: a scorecard that judges each challenger against today's graphite | LiFePO₄ lithium-ion cell (≈3.3 V, 170 and 372 mAh/g, ≈385 Wh/kg theoretical on active materials, Li at 20 ppm) on volts, mAh/g and crustal abundance. Steps go from abundance, sodium-ion (animated rocking chair, host-mass argument), lithium–sulfur (cutting an S₈ ring with 16 electrons), the polysulfide shuttle (particle simulation with coulombic efficiency), solid electrolytes (vacancy hopping), multivalent ions, vanadium's four oxidation states and the flow battery (tank and stack sliders: 1.6 mol/L, 1000 L → 54 kWh at 1.26 V) to molten-electrode cells. Capstone: an element chooser, 7 givers (Li, Na, K, Mg, Ca, Al, Zn) × 3 takers (S, O₂, Cl₂), giving the balanced reaction, voltage from E = −ΔG/nF, mAh/g, Wh/kg, scarcest element and the known catch, with all 21 pairs plotted as energy against abundance. Hooks: 'ions through the electrolyte, electrons through the wire' as the rule every failure mode breaks, energy vs power sized separately, and Na + Cl₂ = 3.98 V closing the loop to the first lesson.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, 17.5 Batteries and Fuel Cells", "url": "https://openstax.org/books/chemistry-2e/pages/17-5-batteries-and-fuel-cells" },
+    { "title": "Wikipedia: Abundance of elements in Earth's crust (CRC Handbook column)", "url": "https://en.wikipedia.org/wiki/Abundance_of_elements_in_Earth%27s_crust" },
+    { "title": "LibreTexts: T1 Standard Thermodynamic Quantities", "url": "https://chem.libretexts.org/Ancillary_Materials/Reference/Reference_Tables/Thermodynamics_Tables/T1%3A_Standard_Thermodynamic_Quantities" },
+    { "title": "Wikipedia: Sodium-ion battery", "url": "https://en.wikipedia.org/wiki/Sodium-ion_battery" },
+    { "title": "Wikipedia: Lithium–sulfur battery", "url": "https://en.wikipedia.org/wiki/Lithium%E2%80%93sulfur_battery" },
+    { "title": "Kamaya et al. (2011), A lithium superionic conductor", "url": "https://doi.org/10.1038/nmat3066" },
+    { "title": "Aurbach et al. (2000), Prototype systems for rechargeable magnesium batteries", "url": "https://doi.org/10.1038/35037553" },
+    { "title": "Wikipedia: Vanadium redox battery", "url": "https://en.wikipedia.org/wiki/Vanadium_redox_battery" },
+    { "title": "Wikipedia: Sodium–sulfur battery", "url": "https://en.wikipedia.org/wiki/Sodium%E2%80%93sulfur_battery" },
+    { "title": "Bradwell et al. (2012), Magnesium–antimony liquid metal battery", "url": "https://doi.org/10.1021/ja209759s" },
+    { "title": "Energy-Storage.news: Rongke Power vanadium flow battery projects", "url": "https://www.energy-storage.news/rongke-power-completes-grid-forming-175mw-700mwh-vanadium-flow-battery-in-china-worlds-largest" },
+    { "title": "CarNewsChina (2025): CATL sodium-ion battery", "url": "https://carnewschina.com/2025/09/18/catl-says-next-gen-sodium-ion-battery-supports-500-km-range-readies-for-2026-mass-production" }
+  ],
+  "engineWishes": [
+    "A shared animation ticker with automatic cleanup (this lesson defines loop(fn, ms) and returns its stop function from six steps).",
+    "plot(): a .text(x, y, str, opts) method for labelling a dot (the capstone appends SVG text to plot.layer by hand).",
+    "hbars(): a log option, so abundances and conductivities need no manual log transform and inverse in fmtv.",
+    "Chem: crustal abundances (ppm), ionic radii and metal densities per element, and a small ΔG°f table, so beyond-lithium, corrosion and electrolysis share one set of numbers.",
+    "A shared scorecard/benchmark table component for the section-3 battery lessons, so every chemistry is compared on the same rows."
+  ]
+}

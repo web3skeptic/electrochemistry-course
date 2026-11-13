@@ -1,0 +1,32 @@
+{
+  "id": "charge-energy",
+  "title": "Charge, energy and capacity",
+  "steps": 10,
+  "concepts": [
+    { "key": "coulomb", "label": "coulomb", "definition": "The unit of electric charge: 1 C is the charge of about 6.24 × 10¹⁸ electrons (one electron carries 1.602 × 10⁻¹⁹ C)." },
+    { "key": "ampere", "label": "ampere", "definition": "The unit of current: 1 A is one coulomb passing a point per second, so charge = current × time." },
+    { "key": "faraday", "label": "Faraday constant", "definition": "F = 96 485 C, the charge of one mole of electrons; charge = n × moles of metal × F converts between amount of substance and coulombs." },
+    { "key": "volt", "label": "volt = joule per coulomb", "definition": "A voltage of 1 V gives 1 joule of energy to each coulomb pushed through the circuit, so energy (J) = charge (C) × voltage (V)." },
+    { "key": "gibbs", "label": "Gibbs energy ΔG = −nFE", "definition": "ΔG is the energy a reaction can hand over as work; for a cell reaction ΔG° = −nFE°cell (J per mole of reaction), negative when E° is positive, i.e. when the reaction is spontaneous." },
+    { "key": "ah", "label": "ampere-hour (capacity)", "definition": "Capacity is the total charge a cell can deliver, counted in ampere-hours: 1 Ah = 3600 C, 1 mAh = 3.6 C; runtime = capacity ÷ current." },
+    { "key": "watt", "label": "watt (power)", "definition": "Power is the rate of delivering energy: 1 W = 1 J/s, and power (W) = voltage (V) × current (A)." },
+    { "key": "wh", "label": "watt-hour (energy)", "definition": "The everyday unit of stored energy: 1 Wh = 3600 J, and energy (Wh) = capacity (Ah) × voltage (V)." },
+    { "key": "speccap", "label": "specific capacity (mAh/g)", "definition": "Theoretical charge per gram of an electrode material: n × F / (3.6 × M) mAh/g for n electrons per formula unit of molar mass M (Zn 820, Li 3862, Al 2980, Pb 259)." },
+    { "key": "specenergy", "label": "specific energy (Wh/kg)", "definition": "Energy per unit mass: specific capacity (mAh/g) × cell voltage (V) = Wh/kg, per kilogram of whatever is counted (anode only, all reactants, or the whole cell)." }
+  ],
+  "namedOnly": ["joule (recalled as the physics unit of energy, not a course concept)", "kWh", "electrolysis (pointer)", "zinc–air cell (pointer)", "practical vs theoretical energy density (pointer to Real batteries)", "Nernst equation (pointer)"],
+  "summary": "Running example: a 6.54 g (0.100 mol) zinc strip consumed in the Daniell cell at 1.10 V, followed through every unit: 0.200 mol e⁻ → 19 297 C → 5.36 Ah → 21.2 kJ = 5.9 Wh, ΔG° = −212 kJ/mol, 820 mAh/g, and 902 → 457 → 262 Wh/kg as the copper ions and sulfate are counted. Capstone: a 'design a gram' calculator (anode Li/Na/Mg/Al/Zn/Fe/Pb × cathode Cu²⁺/Ag⁺/Cl₂/O₂) showing the chain grams → mol e⁻ → C → mAh → V → Wh → Wh/kg with and without cathode mass. Hooks for later lessons: Chem.capacity(n, M) values, 'mAh/g × V = Wh/kg', 'per kilogram of what?', ΔG° = −nFE° as the ceiling on electrical work, and energy drawn as a charge × voltage rectangle.",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, 17.4 Potential, Free Energy, and Equilibrium", "url": "https://openstax.org/books/chemistry-2e/pages/17-4-potential-free-energy-and-equilibrium" },
+    { "title": "OpenStax Chemistry 2e, 17.7 Electrolysis", "url": "https://openstax.org/books/chemistry-2e/pages/17-7-electrolysis" },
+    { "title": "NIST CODATA: Faraday constant", "url": "https://physics.nist.gov/cgi-bin/cuu/Value?f" },
+    { "title": "BIPM, The International System of Units (SI brochure, 9th ed.)", "url": "https://www.bipm.org/en/publications/si-brochure" },
+    { "title": "Wikipedia: Ampere-hour", "url": "https://en.wikipedia.org/wiki/Ampere-hour" },
+    { "title": "Wikipedia: Faraday constant", "url": "https://en.wikipedia.org/wiki/Faraday_constant" },
+    { "title": "Wikipedia: Specific energy", "url": "https://en.wikipedia.org/wiki/Specific_energy" }
+  ],
+  "engineWishes": [
+    "A shared number formatter for large values with thin-space thousands separators and ×10ⁿ notation (fmt.big / fmt.sci10): this lesson defines its own.",
+    "A shared 'area rectangle' widget (quantity × intensity = total) would be reusable for charge × voltage, Ah × V and I × t in later lessons."
+  ]
+}

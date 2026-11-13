@@ -1,0 +1,47 @@
+{
+  "id": "battery-performance",
+  "title": "Real batteries: resistance, rate and energy density",
+  "steps": 10,
+  "concepts": [
+    { "key": "ocv", "label": "open-circuit voltage", "definition": "The voltage between a cell's terminals when no current flows; it equals what the chemistry predicts (E° corrected by Nernst) and depends on the state of charge." },
+    { "key": "sag", "label": "voltage under load (sag)", "definition": "The terminal voltage while current flows, always below the open-circuit voltage on discharge; the gap (sag) grows with the current and disappears when the load is removed." },
+    { "key": "resistance", "label": "resistance (ohm)", "definition": "The volts of push needed per ampere of current through something: 1 Ω = 1 V/A; a device of resistance R on a cell draws I = E / (R + r)." },
+    { "key": "rint", "label": "internal resistance, V = E − I·r", "definition": "The lumped resistance r of everything the current crosses inside a cell (electrolyte, separator, electrode particles, foils), so that terminal voltage V = E − I·r on discharge and E + I·r on charge." },
+    { "key": "heat", "label": "resistive heat I²r", "definition": "The volts lost inside a cell become heat at a rate of I²·r watts; the device gets V·I, the maximum deliverable power is E²/4r at V = E/2, and a short circuit turns everything into heat." },
+    { "key": "overpotential", "label": "overpotential", "definition": "The difference between an electrode's (or cell's) voltage while current flows and its equilibrium value: ohmic loss plus activation (tilting the reaction off equilibrium) plus ion-transport (concentration) loss; internal resistance is its straight-line approximation." },
+    { "key": "crate", "label": "C-rate", "definition": "Current divided by rated capacity: 1C empties the rated capacity in one hour, 2C in half an hour, 0.2C in five hours." },
+    { "key": "usable", "label": "usable capacity vs rate (cut-off voltage)", "definition": "Discharge stops at a cut-off voltage; at higher currents the lower terminal voltage reaches it earlier, so the capacity and (even more) the energy actually delivered shrink as the rate rises." },
+    { "key": "specpower", "label": "specific power (W/kg)", "definition": "Power a cell can deliver per kilogram of its mass; the counterpart of specific energy (Wh/kg)." },
+    { "key": "ragone", "label": "power vs energy (Ragone plot)", "definition": "A log–log plot of specific energy against specific power, one point per complete discharge at one rate; each curve is flat and then falls off a cliff, and diagonals are lines of equal runtime (energy ÷ power)." },
+    { "key": "practical", "label": "theoretical vs practical specific energy", "definition": "Theoretical Wh/kg counts only the reactants of the cell reaction; practical Wh/kg divides by the mass of the whole cell (electrolyte, current collectors, separator, case) and is typically 20–60% of the theoretical value." },
+    { "key": "volumetric", "label": "volumetric energy density (Wh/L)", "definition": "Energy stored per litre of cell volume; the figure that matters when space rather than weight is the limit." },
+    { "key": "parallel", "label": "series vs parallel", "definition": "Cells in series (plus to minus in a chain) add their voltages at one cell's capacity; cells in parallel (like terminals joined) add their capacities at one cell's voltage and share the current." },
+    { "key": "pack", "label": "battery pack (s × p)", "definition": "Cells wired s groups in series, each of p cells in parallel ('4s2p'): voltage s × V, capacity p × Q, energy = number of cells × energy per cell, pack resistance s × r / p." },
+    { "key": "coulombic", "label": "coulombic efficiency", "definition": "Charge delivered on discharge divided by charge put in on charge (Ah out ÷ Ah in); below 100% because some charging current drives side reactions such as gassing or SEI growth." },
+    { "key": "energyeff", "label": "energy efficiency", "definition": "Energy delivered divided by energy put in over a full cycle (Wh out ÷ Wh in) = coulombic efficiency × average discharge voltage ÷ average charge voltage; always lower than the coulombic efficiency." }
+  ],
+  "namedOnly": [
+    "18650 cell format (18 mm × 65 mm cylinder)",
+    "limiting current (where ion transport fails; not a tracked concept)",
+    "Peukert's law (cited as the basis of the lead–acid rate dependence, not named in the text)",
+    "protection electronics / fuse (named only as why real packs survive short circuits)",
+    "constant-voltage taper at the end of Li-ion charging (one-line caveat)",
+    "LaNi5H6 as the model hydride for the theoretical NiMH figure"
+  ],
+  "summary": "Running example: one 18650 Li-ion cell (typical rounded figures: 3.60 V resting, 3.0 Ah, 46 g, 16.5 mL, internal resistance 0.05 Ω, cut-off 2.5 V), followed from a voltmeter reading that sags under load (0.05 V per ampere) through V = E − I·r, I²r heat (max power at 36 A, 72 A short circuit), the three overpotentials, C-rate discharge curves, a Ragone plot against lead–acid, NiMH and LFP cells, theoretical vs practical Wh/kg and Wh/L (lead–acid 171 → 38, NiMH ≈ 215 → 89, Li-ion ≈ 380 → 235 Wh/kg), s × p packs, and coulombic vs energy efficiency. The capstone is a pack designer (chemistry, s, p, constant-power load → runtime, sag, heat, usable capacity) with an e-bike mission (36 V, 250 W for 2 h, ≤ 3 kg; solved by 10s5p Li-ion). Hooks for later lessons: 'open-circuit voltage minus overpotentials', activation/ohmic/transport losses (reused by the fuel-cell polarisation curve), the Ragone plot with runtime diagonals, 'practical is 20–60% of theoretical', energy efficiency = coulombic × voltage ratio (round-trip efficiency), and energy and power being fixed together in a cell (flow batteries separate them).",
+  "sources": [
+    { "title": "OpenStax Chemistry 2e, §17.5 Batteries and Fuel Cells", "url": "https://openstax.org/books/chemistry-2e/pages/17-5-batteries-and-fuel-cells" },
+    { "title": "Wikipedia: Internal resistance", "url": "https://en.wikipedia.org/wiki/Internal_resistance" },
+    { "title": "Wikipedia: Overpotential", "url": "https://en.wikipedia.org/wiki/Overpotential" },
+    { "title": "Wikipedia: Ragone plot", "url": "https://en.wikipedia.org/wiki/Ragone_plot" },
+    { "title": "Wikipedia: Peukert's law", "url": "https://en.wikipedia.org/wiki/Peukert%27s_law" },
+    { "title": "Wikipedia: Comparison of commercial battery types", "url": "https://en.wikipedia.org/wiki/Comparison_of_commercial_battery_types" },
+    { "title": "Wikipedia: Lithium-ion battery", "url": "https://en.wikipedia.org/wiki/Lithium-ion_battery" },
+    { "title": "Wikipedia: Faraday efficiency", "url": "https://en.wikipedia.org/wiki/Faraday_efficiency" }
+  ],
+  "engineWishes": [
+    "plot.band(ptsTop, ptsBottom, color): a filled band between two curves (this lesson hand-rolls it for the overpotential stack and the charge/discharge loop).",
+    "A shared 'cell + wire + load + voltmeter' drawing and an s × p pack drawing in assets would serve every battery lesson.",
+    "A toggle variant for independent on/off buttons (multi-select), styled like toggle()."
+  ]
+}

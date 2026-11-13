@@ -1,0 +1,48 @@
+{
+  "id": "solar-cells",
+  "title": "Silicon and light: electricity without a reaction",
+  "steps": 10,
+  "concepts": [
+    { "key": "covalent", "label": "covalent bond (shared electron pair)", "definition": "A bond made of two electrons, one from each of two neighbouring atoms, that both atoms count toward their full shell; silicon makes four, so no ions form." },
+    { "key": "semi", "label": "semiconductor", "definition": "A covalent crystal (silicon, germanium, GaAs, CdTe) whose valence electrons are all in bonds but can be freed by a modest push from heat, light or foreign atoms, so its conductivity can be set over many powers of ten." },
+    { "key": "ev", "label": "electron-volt (eV)", "definition": "The energy one electron gains when pushed through one volt: 1 eV = 1.602 × 10⁻¹⁹ J, or 96.5 kJ per mole of electrons." },
+    { "key": "gap", "label": "band gap", "definition": "The energy needed to free one bonded electron inside the crystal (silicon 1.12 eV, germanium 0.67, GaAs 1.42, CdTe 1.5, diamond 5.47); an electron given less falls back." },
+    { "key": "hole", "label": "hole", "definition": "A bond with one electron missing; it behaves as a mobile +1 charge because neighbouring bond electrons hop into it, and it vanishes when a free electron recombines with it." },
+    { "key": "ntype", "label": "doping: n-type (extra electrons)", "definition": "Silicon with a few group-15 atoms (phosphorus) swapped in: each gives one free electron and stays behind as a fixed P⁺ ion, so the mobile carriers are negative." },
+    { "key": "ptype", "label": "doping: p-type (holes)", "definition": "Silicon with a few group-13 atoms (boron) swapped in: each takes one bond electron, becoming a fixed B⁻ ion and releasing a mobile hole, so the mobile carriers are positive." },
+    { "key": "junction", "label": "p–n junction", "definition": "The boundary between p-type and n-type regions of one crystal, where electrons and holes have recombined and left a thin carrier-free layer of bare fixed ions." },
+    { "key": "field", "label": "built-in field", "definition": "The electric field across a p–n junction, set up by the bare P⁺ ions on the n side and B⁻ ions on the p side; it pushes electrons to the n side and holes to the p side (about 0.7 V in silicon)." },
+    { "key": "photon", "label": "photon (energy by colour)", "definition": "A packet of light whose energy is fixed by its wavelength: E (eV) ≈ 1240 / wavelength (nm); red about 1.8 eV, violet about 3.1 eV." },
+    { "key": "pv", "label": "photovoltaic effect", "definition": "A photon with at least the band-gap energy frees an electron–hole pair, the junction's field separates them, and the electron returns to the hole through the external circuit: light becomes current with no chemical change." },
+    { "key": "losses", "label": "below-gap and heat losses", "definition": "Photons below the gap pass through unused and the energy of a photon above the gap is lost as heat, which caps a single-junction cell near 44% from these two losses alone and about 33% in full (Shockley–Queisser limit)." },
+    { "key": "iv", "label": "I–V curve", "definition": "The set of current–voltage pairs a lit cell can deliver, from the short-circuit current at 0 V (9 A for the running cell) to the open-circuit voltage at 0 A (about 0.64 V for silicon)." },
+    { "key": "mpp", "label": "maximum power point", "definition": "The point on the I–V curve where the product V × I is largest (about 0.56 V × 8.6 A ≈ 4.8 W for the running cell); the load must be matched to it." }
+  ],
+  "namedOnly": [
+    "valence band / conduction band (named once as the physicists' terms for 'held in a bond' / 'free to roam')",
+    "recombination (electron drops back into a hole; used as plain vocabulary from step 4)",
+    "insulator (glass, diamond: bond electrons too tightly held)",
+    "depletion layer (described as the carrier-free strip of bare ions, not named)",
+    "resistance / ohm (used as 'volts needed per ampere'; pointer to Real batteries)",
+    "Shockley–Queisser limit (stated, not derived)",
+    "gallium arsenide and cadmium telluride (group 13+15 and 12+16 crystals averaging four valence electrons)",
+    "cells in a chain (series) adding voltages in a panel; maximum-power-point tracking electronics",
+    "thermal energy about 0.026 eV at room temperature (stated as a typical jostle)"
+  ],
+  "summary": "Running example: one 156 mm silicon cell (243 cm², about 10 g) in full sun, 24.3 W of light in, 9 A short-circuit, 0.64 V open-circuit, about 4.8 W at the maximum power point; built up from one silicon atom sharing four electron pairs, through the 1.12 eV band gap, holes, phosphorus/boron doping and the p–n junction, to photons freeing pairs. It is contrasted with the Daniell cell's 6.54 g zinc strip (5.36 Ah stored, reactant consumed) to make the point that a solar cell stores nothing and converts. Capstone: a simulator with light intensity, band gap (Ge/Si/GaAs/CdTe presets) and load resistance, an animated cell cross-section, a traceable I–V curve with maximum power point and an energy-budget bar chart. Hooks: the electron-volt (1 eV per electron = 96.5 kJ/mol), 'power = area of the V × I rectangle', load matching, and band gap as a material property set by the elements chosen.",
+  "sources": [
+    { "title": "OpenStax University Physics vol. 3, 9.6 Semiconductors and Doping", "url": "https://openstax.org/books/university-physics-volume-3/pages/9-6-semiconductors-and-doping" },
+    { "title": "OpenStax University Physics vol. 3, 9.7 Semiconductor Devices", "url": "https://openstax.org/books/university-physics-volume-3/pages/9-7-semiconductor-devices" },
+    { "title": "PVEducation: Solar Cell Operation (I–V curve)", "url": "https://www.pveducation.org/pvcdrom/solar-cell-operation/iv-curve" },
+    { "title": "Shockley & Queisser (1961), Detailed Balance Limit of Efficiency of p-n Junction Solar Cells", "url": "https://doi.org/10.1063/1.1736034" },
+    { "title": "Wikipedia: Shockley–Queisser limit", "url": "https://en.wikipedia.org/wiki/Shockley%E2%80%93Queisser_limit" },
+    { "title": "Wikipedia: Band gap", "url": "https://en.wikipedia.org/wiki/Band_gap" },
+    { "title": "NREL Best Research-Cell Efficiency Chart", "url": "https://www.nrel.gov/pv/cell-efficiency.html" },
+    { "title": "Misiakos & Tsamakis (1993), silicon intrinsic carrier density", "url": "https://doi.org/10.1063/1.354551" }
+  ],
+  "engineWishes": [
+    "A shared timer/tween helper with automatic cleanup (this lesson has a local mkClock with every/after/tween/stop); most chemistry lessons re-implement one.",
+    "smoke.mjs clicks every widget button in order, so screenshots always show the state after the last button (usually Reset); a data-shot-skip attribute or taking the shot before the Reset click would make animated widgets reviewable.",
+    "plot(): a y2 (right-hand) axis would let I–V and power curves share a plot without sharing a numeric scale."
+  ]
+}
